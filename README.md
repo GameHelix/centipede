@@ -487,28 +487,49 @@ xychart-beta
 
 ### Model Evolution Journey
 ```mermaid
-sankey-beta
-    Initial Research,Data Collection,100
-    Data Collection,Feature Engineering,100
-    Feature Engineering,Initial Model,100
-    Initial Model,Overfitting Detection,100
-    Overfitting Detection,Problem Resolution,100
-    Problem Resolution,Robust Model,100
+flowchart LR
+    A[Initial Research] --> B[Data Collection<br/>58,002 rows]
+    B --> C[Feature Engineering<br/>24 features]
+    C --> D[Initial Model<br/>99.5% accuracy]
+    D --> E{Overfitting<br/>Detected?}
+    E -->|Yes| F[8 Detection Methods<br/>Applied]
+    F --> G[Problem Resolution<br/>Data leakage fixed]
+    G --> H[Advanced Validation<br/>Time series CV]
+    H --> I[Robust Model<br/>98.11% accuracy]
+    I --> J[Production Deployment<br/>3.7KB model]
     
-    Initial Model,Discarded (99.5% Overfitted),30
-    Problem Resolution,Advanced Validation,70
-    Advanced Validation,Robust Model,70
-    Robust Model,Production Deployment,100
+    D -.->|Discarded| K[Overfitted Model<br/>99.5% unreliable]
+    
+    style A fill:#e1f5fe
+    style D fill:#ffcdd2
+    style I fill:#c8e6c9
+    style J fill:#dcedc8
+    style K fill:#ffebee,stroke-dasharray: 5 5
 ```
 
 ### Computational Performance
-```
-⚡ Speed Benchmarks:
-   • Single Prediction: ~50ms
-   • Batch Prediction (100 dates): ~2.1s
-   • Yearly Comparison: ~200ms  
-   • Model Loading: ~15ms (3.7KB file)
-   • Memory Usage: <50MB peak
+```mermaid
+graph TD
+    A[Performance Metrics] --> B[Speed Benchmarks]
+    A --> C[Resource Usage]
+    A --> D[Scalability]
+    
+    B --> B1[Single Prediction<br/>~50ms]
+    B --> B2[Batch Prediction<br/>100 dates: ~2.1s]
+    B --> B3[Model Loading<br/>~15ms]
+    
+    C --> C1[Memory Usage<br/><50MB peak]
+    C --> C2[Model Size<br/>3.7KB file]
+    C --> C3[CPU Usage<br/>Low overhead]
+    
+    D --> D1[Concurrent Users<br/>High throughput]
+    D --> D2[API Response<br/>Sub-second]
+    D --> D3[Batch Processing<br/>1000+ predictions/min]
+    
+    style A fill:#4fc3f7
+    style B fill:#81c784
+    style C fill:#ffb74d
+    style D fill:#f06292
 ```
 
 ## 🔮 Future Enhancements
