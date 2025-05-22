@@ -7,6 +7,46 @@
 
 A comprehensive machine learning system for predicting hourly natural gas consumption with **98.11% cross-validated accuracy**. This project demonstrates advanced time series forecasting, rigorous overfitting detection, and production-ready deployment capabilities.
 
+## 🏗️ System Architecture Overview
+```mermaid
+graph TB
+    subgraph "Data Layer"
+        A[📄 PDF Data<br/>58,002 rows] --> B[📊 CSV Processing<br/>6.6 years]
+    end
+    
+    subgraph "Feature Engineering"
+        B --> C[🔧 24 Engineered Features]
+        C --> D[Environmental<br/>6 features]
+        C --> E[Temporal<br/>8 features] 
+        C --> F[Historical<br/>5 features]
+        C --> G[Statistical<br/>5 features]
+    end
+    
+    subgraph "Model Training"
+        D --> H[🤖 Ridge Regression<br/>α=1.0]
+        E --> H
+        F --> H
+        G --> H
+        H --> I[🔄 5-Fold Time Series CV<br/>98.11% ± 0.78%]
+    end
+    
+    subgraph "Validation & Quality"
+        I --> J[🔍 8 Overfitting Tests<br/>Risk Score: 3/10]
+        J --> K[✅ Production Model<br/>3.7KB file]
+    end
+    
+    subgraph "Applications"
+        K --> L[🔮 Future Predictions<br/>2025 Forecasts]
+        K --> M[📈 Trend Analysis<br/>Yearly Comparisons]
+        K --> N[🏢 Business Intelligence<br/>Energy Planning]
+    end
+    
+    style A fill:#ffe6e6
+    style H fill:#e6f3ff
+    style K fill:#e6ffe6
+    style J fill:#fff2e6
+```
+
 ## 🏆 Key Achievements
 
 - **🎯 High Accuracy**: 98.11% R² (±0.78% stability) with proper validation
@@ -19,20 +59,46 @@ A comprehensive machine learning system for predicting hourly natural gas consum
 ## 📊 Project Evolution: From Overfitted to Robust
 
 ### The Journey
-1. **Initial Model**: 99.5% accuracy → **Identified as overfitted** due to data leakage
-2. **Comprehensive Analysis**: Implemented 8 overfitting detection methods
-3. **Problem Resolution**: Fixed data leakage, outliers, and validation issues  
-4. **Final Model**: 98.11% accuracy with **proven generalization** across 6+ years
+```mermaid
+flowchart TD
+    A[Initial Model<br/>99.5% Accuracy] --> B{Suspicious Results?}
+    B -->|Yes| C[🔍 Deep Investigation]
+    C --> D[Data Leakage Detected<br/>lag1 feature: 99.51% correlation]
+    D --> E[Implement 8 Overfitting<br/>Detection Methods]
+    E --> F[🛠️ Problem Resolution]
+    F --> G[Remove Direct Leakage<br/>Add 6+ hour gaps]
+    G --> H[Robust Preprocessing<br/>Winsorization + RobustScaler]
+    H --> I[Time Series CV<br/>5-Fold Validation]
+    I --> J[✅ Final Model<br/>98.11% Accuracy<br/>Proven Generalization]
+    
+    style A fill:#ffcccc
+    style J fill:#ccffcc
+    style D fill:#ffd700
+    style F fill:#87ceeb
+```
 
 ### Overfitting Detection Arsenal
-- ✅ Data leakage detection and correlation analysis
-- ✅ Time series cross-validation (3 strategies)
-- ✅ Walk-forward validation
-- ✅ Nested cross-validation  
-- ✅ Bootstrap validation
-- ✅ Learning curves analysis
-- ✅ Advanced residual analysis
-- ✅ Feature importance stability testing
+```mermaid
+mindmap
+  root((Overfitting Detection))
+    Data Quality
+      Data Leakage Detection
+      Correlation Analysis
+      Feature Importance Stability
+    Validation Methods
+      Time Series CV (3 strategies)
+      Walk-Forward Validation
+      Nested Cross-Validation
+      Bootstrap Validation
+    Model Analysis
+      Learning Curves Analysis
+      Advanced Residual Analysis
+      Performance Gap Testing
+    Results
+      Risk Score: 3/10
+      Status: Low Risk ✅
+      Confidence: High
+```
 
 ## 📈 Dataset & Performance
 
@@ -67,27 +133,56 @@ A comprehensive machine learning system for predicting hourly natural gas consum
 
 ## 🛠️ Technical Architecture
 
+### Complete Data Processing Pipeline
+```mermaid
+flowchart LR
+    A[📄 Raw PDF Data<br/>58,002 rows] --> B[🔧 PDF Parser<br/>pdfplumber]
+    B --> C[📊 CSV Dataset<br/>2018-2024]
+    C --> D[🔍 Data Quality Check<br/>Outlier Detection]
+    D --> E[🛠️ Preprocessing<br/>Winsorization]
+    E --> F[⚙️ Feature Engineering<br/>24 Features]
+    F --> G[📏 Scaling<br/>RobustScaler]
+    G --> H[🤖 Model Training<br/>Ridge Regression]
+    H --> I[✅ Validation<br/>5-Fold Time Series CV]
+    I --> J[💾 Model Deployment<br/>3.7KB pickle file]
+    J --> K[🔮 Predictions<br/>Future Forecasting]
+    
+    style A fill:#ffe6e6
+    style K fill:#e6ffe6
+    style H fill:#e6f3ff
+```
+
 ### Feature Engineering Pipeline
-```python
-🔧 24 Engineered Features:
-   
-   Environmental (6 features):
-   • density, pressure, pressure_diff, temperature
-   • temp_pressure_interaction, pressure_density_ratio
-   
-   Temporal (8 features):
-   • hour_sin/cos, day_of_week_sin/cos, month_sin/cos
-   • day_of_month, is_weekend
-   
-   Historical (5 features):
-   • volume_lag_6h, _12h, _24h, _48h, _168h
-   
-   Rolling Statistics (3 features):
-   • rolling_mean_24h_lag12, rolling_std_24h_lag12
-   • rolling_median_168h_lag24
-   
-   Environmental Trends (2 features):
-   • temp_rolling_mean_24h, pressure_rolling_std_24h
+```mermaid
+graph TD
+    A[Raw Data] --> B[Environmental Features]
+    A --> C[Temporal Features] 
+    A --> D[Historical Features]
+    A --> E[Statistical Features]
+    
+    B --> B1[density<br/>pressure<br/>temperature<br/>pressure_diff]
+    B --> B2[temp_pressure_interaction<br/>pressure_density_ratio]
+    
+    C --> C1[hour_sin/cos<br/>day_of_week_sin/cos<br/>month_sin/cos]
+    C --> C2[day_of_month<br/>is_weekend]
+    
+    D --> D1[volume_lag_6h<br/>volume_lag_12h<br/>volume_lag_24h]
+    D --> D2[volume_lag_48h<br/>volume_lag_168h]
+    
+    E --> E1[rolling_mean_24h_lag12<br/>rolling_std_24h_lag12<br/>rolling_median_168h_lag24]
+    E --> E2[temp_rolling_mean_24h<br/>pressure_rolling_std_24h]
+    
+    B1 --> F[24 Engineered Features]
+    B2 --> F
+    C1 --> F
+    C2 --> F
+    D1 --> F
+    D2 --> F
+    E1 --> F
+    E2 --> F
+    
+    style F fill:#90EE90
+    style A fill:#FFB6C1
 ```
 
 ### Model Architecture
@@ -99,27 +194,53 @@ A comprehensive machine learning system for predicting hourly natural gas consum
 ## 🎯 Seasonal Intelligence & Predictions
 
 ### Historical Patterns Discovered
+```mermaid
+xychart-beta
+    title "Gas Usage Trends: July 23rd Across Years"
+    x-axis [2018, 2019, 2020, 2021, 2022, 2023, 2024]
+    y-axis "Usage (m³/hour)" 6.0 --> 7.5
+    line [6.67, 7.35, 6.59, 6.53, 7.04, 6.48, 7.32]
 ```
-📈 Yearly Usage Patterns (July 23rd comparison):
-   2018: 6.67 m³/h │ 2022: 7.04 m³/h
-   2019: 7.35 m³/h │ 2023: 6.48 m³/h (efficiency improvements)
-   2020: 6.59 m³/h │ 2024: 7.32 m³/h (13% recovery)
-   2021: 6.53 m³/h │
-   
-   📊 Long-term Trend: +0.11 m³/hour/year (6-year growth)
-   🎯 COVID Impact: Visible 2020-2021 reduction
-   ⚡ Recent Recovery: 13% increase (2023→2024)
+
+```mermaid
+graph TD
+    A[Historical Analysis<br/>2018-2024] --> B[Peak Usage<br/>2019: 7.35 m³/h]
+    A --> C[COVID Impact<br/>2020-2021: Reduced]
+    A --> D[Efficiency Era<br/>2023: 6.48 m³/h Minimum]
+    A --> E[Recovery Trend<br/>2024: 7.32 m³/h +13%]
+    
+    F[Trend Analysis] --> G[+0.11 m³/h per year<br/>6-Year Growth]
+    F --> H[Seasonal Patterns<br/>Identified]
+    F --> I[Business Cycles<br/>Captured]
+    
+    style B fill:#ffd700
+    style C fill:#ffb6c1
+    style D fill:#87ceeb
+    style E fill:#90ee90
 ```
 
 ### 2025 Predictions
+```mermaid
+pie title 2025 Seasonal Forecast Distribution
+    "Winter (28.16 m³/h)" : 35
+    "Fall (22.68 m³/h)" : 28  
+    "Spring (19.64 m³/h)" : 24
+    "Summer (9.43 m³/h)" : 13
 ```
-🔮 Seasonal Forecasts for 2025:
-   • Winter 2025: 28.16 m³/hour (heating season)
-   • Spring 2025: 19.64 m³/hour (moderate usage)
-   • Summer 2025: 9.43 m³/hour (minimal usage)
-   • Fall 2025: 22.68 m³/hour (increasing trend)
-   
-   Expected Summer Growth: +2.11 m³/hour vs 2024
+
+```mermaid
+flowchart LR
+    A[2024 Baseline<br/>Summer: 7.32 m³/h] --> B[Seasonal Model<br/>Environmental Factors]
+    B --> C[2025 Predictions]
+    C --> D[Winter: 28.16 m³/h<br/>🔥 Heating Season]
+    C --> E[Spring: 19.64 m³/h<br/>🌸 Moderate Usage]  
+    C --> F[Summer: 9.43 m³/h<br/>☀️ +2.11 vs 2024]
+    C --> G[Fall: 22.68 m³/h<br/>🍂 Increasing Trend]
+    
+    style D fill:#ff6b6b
+    style E fill:#4ecdc4
+    style F fill:#ffe66d
+    style G fill:#ff8b42
 ```
 
 ## 🚀 Quick Start
@@ -194,18 +315,60 @@ gas_usage_prediction/
 ## 🧪 Validation Methodology
 
 ### Cross-Validation Strategy
-```python
-🔄 5-Fold Time Series Cross-Validation:
-   
-   Fold 1: Train(2018-2019) → Test(2019-2020)  │  9,639 samples each
-   Fold 2: Train(2018-2020) → Test(2020-2021)  │ 19,278 → 9,639
-   Fold 3: Train(2018-2021) → Test(2021-2022)  │ 28,917 → 9,639  
-   Fold 4: Train(2018-2022) → Test(2022-2023)  │ 38,556 → 9,639
-   Fold 5: Train(2018-2023) → Test(2023-2024)  │ 48,195 → 9,639
-   
-   ✅ No data leakage: Future never predicts past
-   ✅ Temporal integrity: Chronological order maintained
-   ✅ Realistic testing: Most recent data as final test
+```mermaid
+timeline
+    title 5-Fold Time Series Cross-Validation (2018-2024)
+    
+    2018 : Training Data Start
+    
+    2019 : Fold 1 Split
+         : Train: 2018-2019 (9,639)
+         : Test: 2019-2020 (9,639)
+         : R² = 97.93%
+    
+    2020 : Fold 2 Split  
+         : Train: 2018-2020 (19,278)
+         : Test: 2020-2021 (9,639)
+         : R² = 96.82% (COVID Impact)
+    
+    2021 : Fold 3 Split
+         : Train: 2018-2021 (28,917)
+         : Test: 2021-2022 (9,639)  
+         : R² = 97.98%
+    
+    2022 : Fold 4 Split
+         : Train: 2018-2022 (38,556)
+         : Test: 2022-2023 (9,639)
+         : R² = 98.95%
+    
+    2023 : Fold 5 Split
+         : Train: 2018-2023 (48,195)
+         : Test: 2023-2024 (9,639)
+         : R² = 98.89%
+    
+    2024 : Final Performance
+         : Mean R²: 98.11% ± 0.78%
+         : Stability: Excellent ✅
+```
+
+### Validation Methods Comparison
+```mermaid
+graph LR
+    A[Model Validation] --> B[Traditional CV<br/>❌ Data Leakage Risk]
+    A --> C[Time Series CV<br/>✅ Temporal Integrity]
+    A --> D[Walk-Forward<br/>✅ Real-world Simulation]
+    A --> E[Bootstrap<br/>✅ Confidence Intervals]
+    
+    C --> F[No Future→Past<br/>Information Flow]
+    D --> G[Sequential<br/>Prediction Testing]
+    E --> H[Uncertainty<br/>Quantification]
+    
+    F --> I[✅ 98.11% ± 0.78%]
+    G --> I
+    H --> I
+    
+    style I fill:#90EE90
+    style B fill:#FFB6C1
 ```
 
 ### Overfitting Prevention
@@ -216,6 +379,37 @@ gas_usage_prediction/
 - **📈 Stability Testing**: Feature importance consistency across folds
 
 ## 🎯 Business Applications
+
+### Model Usage Scenarios
+```mermaid
+flowchart TD
+    A[Gas Usage Prediction Model] --> B[Energy Planning]
+    A --> C[Infrastructure Management]
+    A --> D[Financial Forecasting]
+    A --> E[Operational Optimization]
+    
+    B --> B1[Winter Demand Forecasting<br/>Peak: 28.1 m³/h]
+    B --> B2[Seasonal Capacity Planning<br/>Q1-Q4 Requirements]
+    B --> B3[Holiday Usage Analysis<br/>Pattern Recognition]
+    
+    C --> C1[Pipeline Capacity<br/>Infrastructure Sizing]
+    C --> C2[Maintenance Scheduling<br/>Low-usage Periods]
+    C --> C3[Emergency Planning<br/>Peak Load Management]
+    
+    D --> D1[Budget Planning<br/>Seasonal Cost Allocation]
+    D --> D2[Contract Optimization<br/>Supply Agreements]
+    D --> D3[Risk Management<br/>Usage Volatility]
+    
+    E --> E1[Real-time Monitoring<br/>Anomaly Detection]
+    E --> E2[Efficiency Tracking<br/>YoY Comparisons]
+    E --> E3[Performance KPIs<br/>Business Intelligence]
+    
+    style A fill:#4ecdc4
+    style B fill:#ffe66d
+    style C fill:#ff8b42
+    style D fill:#a8e6cf
+    style E fill:#ff6b6b
+```
 
 ### Energy Planning
 ```python
@@ -274,6 +468,15 @@ annual_growth = trend_data['trend']['slope']  # m³/hour per year
 
 ## 📈 Performance Benchmarks
 
+### Model Performance Comparison
+```mermaid
+xychart-beta
+    title "Model Performance: R² Score Comparison"
+    x-axis ["Our Model", "Industry Standard", "Basic ML", "Statistical"]
+    y-axis "R² Score (%)" 80 --> 100
+    bar [98.11, 87.5, 82.3, 75.2]
+```
+
 ### Accuracy Comparison
 | Method | Our Model | Industry Standard | Improvement |
 |--------|-----------|------------------|-------------|
@@ -281,6 +484,22 @@ annual_growth = trend_data['trend']['slope']  # m³/hour per year
 | **RMSE** | 1.95 m³/h | 3-5 m³/h | 35-60% better |
 | **Stability** | ±0.78% | ±5-10% | 85% more stable |
 | **Temporal Range** | 6.6 years | 1-2 years | 3x longer validation |
+
+### Model Evolution Journey
+```mermaid
+sankey-beta
+    Initial Research,Data Collection,100
+    Data Collection,Feature Engineering,100
+    Feature Engineering,Initial Model,100
+    Initial Model,Overfitting Detection,100
+    Overfitting Detection,Problem Resolution,100
+    Problem Resolution,Robust Model,100
+    
+    Initial Model,Discarded (99.5% Overfitted),30
+    Problem Resolution,Advanced Validation,70
+    Advanced Validation,Robust Model,70
+    Robust Model,Production Deployment,100
+```
 
 ### Computational Performance
 ```
