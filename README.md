@@ -609,7 +609,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Author**: [Ismat Samadov](https://ismat.pro)
 - **Issues**: [GitHub Issues](https://github.com/Ismat-Samadov/gas_usage_prediction/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/Ismat-Samadov/gas_usage_prediction/discussions)
 
 ---
 
