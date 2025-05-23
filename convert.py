@@ -77,7 +77,7 @@ for col in numeric_cols:
 df["timestamp"] = pd.to_datetime(df["timestamp"], format="%d-%m-%Y %H:%M")
 
 # Save as CSV
-csv_path = "data/data_with_diameters.csv"
+csv_path = "data/data.csv"
 df.to_csv(csv_path, index=False)
 
 print(f"Extracted data (with D and d) has been saved to '{csv_path}'")
