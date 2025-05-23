@@ -1,0 +1,137 @@
+<!-- templates/500.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Error - Gas Usage Prediction System</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .error-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .error-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .btn-gradient {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border: none;
+            color: white;
+        }
+        .btn-gradient:hover {
+            background: linear-gradient(135deg, #764ba2, #667eea);
+            color: white;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="error-card p-5 text-center">
+                        <div class="mb-4">
+                            <i class="fas fa-exclamation-triangle text-danger" style="font-size: 4rem;"></i>
+                        </div>
+                        
+                        <h1 class="display-4 gradient-text mb-3">500</h1>
+                        <h3 class="mb-3">Internal Server Error</h3>
+                        
+                        <p class="lead mb-4">
+                            Something went wrong on our end. Our engineering team has been notified 
+                            and is working to fix the issue.
+                        </p>
+                        
+                        <div class="alert alert-warning">
+                            <h6><i class="fas fa-tools"></i> What happened?</h6>
+                            <p class="mb-0">
+                                The server encountered an unexpected condition that prevented it from 
+                                fulfilling your request. This could be due to:
+                            </p>
+                            <ul class="list-unstyled mt-2 mb-0">
+                                <li><i class="fas fa-circle text-warning" style="font-size: 0.5rem;"></i> Model loading issues</li>
+                                <li><i class="fas fa-circle text-warning" style="font-size: 0.5rem;"></i> Database connectivity problems</li>
+                                <li><i class="fas fa-circle text-warning" style="font-size: 0.5rem;"></i> Temporary server overload</li>
+                                <li><i class="fas fa-circle text-warning" style="font-size: 0.5rem;"></i> Configuration errors</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="d-flex gap-3 justify-content-center mb-4">
+                            <a href="/" class="btn btn-gradient">
+                                <i class="fas fa-home"></i> Go Home
+                            </a>
+                            <button onclick="location.reload()" class="btn btn-outline-primary">
+                                <i class="fas fa-redo"></i> Try Again
+                            </button>
+                            <button onclick="history.back()" class="btn btn-outline-secondary">
+                                <i class="fas fa-arrow-left"></i> Go Back
+                            </button>
+                        </div>
+                        
+                        <hr>
+                        
+                        <div class="text-muted">
+                            <h6><i class="fas fa-headset"></i> Need Help?</h6>
+                            <p class="mb-0">
+                                If this problem persists, please contact our support team or 
+                                <a href="https://github.com/Ismat-Samadov/gas_usage_prediction/issues" target="_blank" class="text-decoration-none">
+                                    report an issue on GitHub
+                                </a>
+                            </p>
+                            <small class="text-muted">
+                                Error ID: {{ request.environ.get('REQUEST_ID', 'Unknown') }} | 
+                                Time: {{ moment().format('YYYY-MM-DD HH:mm:ss') }}
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Auto-refresh every 30 seconds
+        setTimeout(function() {
+            const refreshBtn = document.createElement('div');
+            refreshBtn.className = 'alert alert-info mt-3';
+            refreshBtn.innerHTML = `
+                <i class="fas fa-info-circle"></i> 
+                This page will automatically refresh in <span id="countdown">30</span> seconds...
+                <button class="btn btn-sm btn-outline-info ms-2" onclick="location.reload()">
+                    Refresh Now
+                </button>
+            `;
+            document.querySelector('.error-card').appendChild(refreshBtn);
+            
+            let countdown = 30;
+            const timer = setInterval(() => {
+                countdown--;
+                document.getElementById('countdown').textContent = countdown;
+                if (countdown <= 0) {
+                    location.reload();
+                }
+            }, 1000);
+        }, 5000);
+    </script>
+</body>
+</html>

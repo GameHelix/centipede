@@ -1,0 +1,103 @@
+
+<!-- templates/404.html -->
+{% extends "base.html" %}
+
+{% block title %}Page Not Found - Gas Usage Prediction System{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 text-center">
+        <div class="card">
+            <div class="card-body py-5">
+                <div class="feature-icon text-warning mb-4">
+                    <i class="fas fa-search fa-4x"></i>
+                </div>
+                
+                <h1 class="display-4 gradient-text mb-4">404</h1>
+                <h3 class="mb-3">Page Not Found</h3>
+                
+                <p class="lead mb-4">
+                    Oops! The page you're looking for seems to have vanished into thin air, 
+                    just like gas through a leaky pipe.
+                </p>
+                
+                <div class="alert alert-info">
+                    <h6><i class="fas fa-info-circle"></i> What you can do:</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li><i class="fas fa-arrow-right text-primary"></i> Check the URL for typos</li>
+                        <li><i class="fas fa-arrow-right text-primary"></i> Go back to the previous page</li>
+                        <li><i class="fas fa-arrow-right text-primary"></i> Visit our homepage</li>
+                        <li><i class="fas fa-arrow-right text-primary"></i> Use the navigation menu above</li>
+                    </ul>
+                </div>
+                
+                <div class="d-flex gap-3 justify-content-center mt-4">
+                    <a href="{{ url_for('index') }}" class="btn btn-primary">
+                        <i class="fas fa-home"></i> Go Home
+                    </a>
+                    <button onclick="history.back()" class="btn btn-outline-secondary">
+                        <i class="fas fa-arrow-left"></i> Go Back
+                    </button>
+                    <a href="{{ url_for('predict_page') }}" class="btn btn-outline-success">
+                        <i class="fas fa-chart-line"></i> Start Predicting
+                    </a>
+                </div>
+                
+                <hr class="my-4">
+                
+                <div class="text-muted">
+                    <p class="mb-0">
+                        <i class="fas fa-robot"></i> Our gas prediction model is still working perfectly with 98.59% accuracy!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Quick Links -->
+<div class="row mt-4">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <div class="feature-icon text-primary">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h6>Single Prediction</h6>
+                <p class="small">Get instant gas usage predictions</p>
+                <a href="{{ url_for('predict_page') }}" class="btn btn-sm btn-outline-primary">
+                    Try Now
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <div class="feature-icon text-success">
+                    <i class="fas fa-list"></i>
+                </div>
+                <h6>Batch Processing</h6>
+                <p class="small">Multiple predictions at once</p>
+                <a href="{{ url_for('batch_page') }}" class="btn btn-sm btn-outline-success">
+                    Explore
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body text-center">
+                <div class="feature-icon text-warning">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h6>Pipe Comparison</h6>
+                <p class="small">Analyze pipe configurations</p>
+                <a href="{{ url_for('compare_page') }}" class="btn btn-sm btn-outline-warning">
+                    Compare
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
