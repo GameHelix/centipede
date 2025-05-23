@@ -1,14 +1,12 @@
-
-<!-- templates/404.html -->
 {% extends "base.html" %}
 
 {% block title %}Page Not Found - Gas Usage Prediction System{% endblock %}
 
 {% block content %}
 <div class="row justify-content-center">
-    <div class="col-md-8 text-center">
+    <div class="col-lg-8 col-xl-6">
         <div class="card">
-            <div class="card-body py-5">
+            <div class="card-body py-5 text-center">
                 <div class="feature-icon text-warning mb-4">
                     <i class="fas fa-search fa-4x"></i>
                 </div>
@@ -23,7 +21,7 @@
                 
                 <div class="alert alert-info">
                     <h6><i class="fas fa-info-circle"></i> What you can do:</h6>
-                    <ul class="list-unstyled mb-0">
+                    <ul class="list-unstyled mb-0 small">
                         <li><i class="fas fa-arrow-right text-primary"></i> Check the URL for typos</li>
                         <li><i class="fas fa-arrow-right text-primary"></i> Go back to the previous page</li>
                         <li><i class="fas fa-arrow-right text-primary"></i> Visit our homepage</li>
@@ -31,22 +29,28 @@
                     </ul>
                 </div>
                 
-                <div class="d-flex gap-3 justify-content-center mt-4">
-                    <a href="{{ url_for('index') }}" class="btn btn-primary">
-                        <i class="fas fa-home"></i> Go Home
-                    </a>
-                    <button onclick="history.back()" class="btn btn-outline-secondary">
-                        <i class="fas fa-arrow-left"></i> Go Back
-                    </button>
-                    <a href="{{ url_for('predict_page') }}" class="btn btn-outline-success">
-                        <i class="fas fa-chart-line"></i> Start Predicting
-                    </a>
+                <div class="row g-2 justify-content-center mt-4">
+                    <div class="col-auto">
+                        <a href="{{ url_for('index') }}" class="btn btn-primary">
+                            <i class="fas fa-home"></i> Go Home
+                        </a>
+                    </div>
+                    <div class="col-auto">
+                        <button onclick="history.back()" class="btn btn-outline-secondary">
+                            <i class="fas fa-arrow-left"></i> Go Back
+                        </button>
+                    </div>
+                    <div class="col-auto d-none d-sm-block">
+                        <a href="{{ url_for('predict_page') }}" class="btn btn-outline-success">
+                            <i class="fas fa-chart-line"></i> Start Predicting
+                        </a>
+                    </div>
                 </div>
                 
                 <hr class="my-4">
                 
                 <div class="text-muted">
-                    <p class="mb-0">
+                    <p class="mb-0 small">
                         <i class="fas fa-robot"></i> Our gas prediction model is still working perfectly with 98.59% accuracy!
                     </p>
                 </div>
@@ -57,7 +61,7 @@
 
 <!-- Quick Links -->
 <div class="row mt-4">
-    <div class="col-md-4">
+    <div class="col-md-4 mb-3">
         <div class="card">
             <div class="card-body text-center">
                 <div class="feature-icon text-primary">
@@ -71,7 +75,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 mb-3">
         <div class="card">
             <div class="card-body text-center">
                 <div class="feature-icon text-success">
@@ -85,7 +89,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 mb-3">
         <div class="card">
             <div class="card-body text-center">
                 <div class="feature-icon text-warning">
@@ -96,6 +100,27 @@
                 <a href="{{ url_for('compare_page') }}" class="btn btn-sm btn-outline-warning">
                     Compare
                 </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mobile-specific help section -->
+<div class="row mt-4 d-block d-md-none">
+    <div class="col-12">
+        <div class="alert alert-light border">
+            <h6><i class="fas fa-mobile-alt"></i> Quick Access</h6>
+            <div class="row g-2">
+                <div class="col-6">
+                    <a href="{{ url_for('predict_page') }}" class="btn btn-sm btn-success w-100">
+                        <i class="fas fa-chart-line"></i> Predict
+                    </a>
+                </div>
+                <div class="col-6">
+                    <a href="{{ url_for('about_page') }}" class="btn btn-sm btn-info w-100">
+                        <i class="fas fa-info-circle"></i> About
+                    </a>
+                </div>
             </div>
         </div>
     </div>

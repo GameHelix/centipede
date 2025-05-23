@@ -7,16 +7,19 @@
     <div class="col-12">
         <div class="text-center mb-4">
             <h2 class="gradient-text">
-                <i class="fas fa-chart-line"></i> Single Gas Usage Prediction
+                <i class="fas fa-chart-line"></i> 
+                <span class="d-none d-sm-inline">Single Gas Usage Prediction</span>
+                <span class="d-inline d-sm-none">Gas Prediction</span>
             </h2>
-            <p class="lead">Predict natural gas consumption for any specific date and time</p>
+            <p class="lead d-none d-md-block">Predict natural gas consumption for any specific date and time</p>
+            <p class="d-block d-md-none">Predict gas usage for any date and time</p>
         </div>
     </div>
 </div>
 
 <div class="row">
     <!-- Prediction Form -->
-    <div class="col-lg-6">
+    <div class="col-lg-6 mb-4">
         <div class="card">
             <div class="card-header">
                 <i class="fas fa-cog"></i> Prediction Parameters
@@ -36,19 +39,35 @@
                     <!-- Quick Date Presets -->
                     <div class="mb-3">
                         <label class="form-label">Quick Presets</label>
-                        <div class="d-flex flex-wrap gap-2">
-                            <button type="button" class="btn btn-sm btn-outline-primary" onclick="setQuickDate('winter')">
-                                <i class="fas fa-snowflake"></i> Winter Evening
-                            </button>
-                            <button type="button" class="btn btn-sm btn-outline-success" onclick="setQuickDate('summer')">
-                                <i class="fas fa-sun"></i> Summer Midday
-                            </button>
-                            <button type="button" class="btn btn-sm btn-outline-warning" onclick="setQuickDate('spring')">
-                                <i class="fas fa-seedling"></i> Spring Noon
-                            </button>
-                            <button type="button" class="btn btn-sm btn-outline-info" onclick="setQuickDate('fall')">
-                                <i class="fas fa-leaf"></i> Fall Evening
-                            </button>
+                        <div class="row g-2">
+                            <div class="col-6 col-sm-3">
+                                <button type="button" class="btn btn-sm btn-outline-primary w-100" onclick="setQuickDate('winter')">
+                                    <i class="fas fa-snowflake d-block d-sm-inline"></i> 
+                                    <span class="d-none d-sm-inline">Winter</span>
+                                    <small class="d-block d-sm-none">Winter</small>
+                                </button>
+                            </div>
+                            <div class="col-6 col-sm-3">
+                                <button type="button" class="btn btn-sm btn-outline-success w-100" onclick="setQuickDate('summer')">
+                                    <i class="fas fa-sun d-block d-sm-inline"></i> 
+                                    <span class="d-none d-sm-inline">Summer</span>
+                                    <small class="d-block d-sm-none">Summer</small>
+                                </button>
+                            </div>
+                            <div class="col-6 col-sm-3">
+                                <button type="button" class="btn btn-sm btn-outline-warning w-100" onclick="setQuickDate('spring')">
+                                    <i class="fas fa-seedling d-block d-sm-inline"></i> 
+                                    <span class="d-none d-sm-inline">Spring</span>
+                                    <small class="d-block d-sm-none">Spring</small>
+                                </button>
+                            </div>
+                            <div class="col-6 col-sm-3">
+                                <button type="button" class="btn btn-sm btn-outline-info w-100" onclick="setQuickDate('fall')">
+                                    <i class="fas fa-leaf d-block d-sm-inline"></i> 
+                                    <span class="d-none d-sm-inline">Fall</span>
+                                    <small class="d-block d-sm-none">Fall</small>
+                                </button>
+                            </div>
                         </div>
                     </div>
 
@@ -63,23 +82,23 @@
                     </div>
 
                     <div id="environmental_fields" style="display: none;">
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
+                        <div class="row g-3">
+                            <div class="col-6">
                                 <label for="temperature" class="form-label">Temperature (°C)</label>
                                 <input type="number" class="form-control" id="temperature" name="temperature" 
                                        step="0.1" value="15.0">
                             </div>
-                            <div class="col-md-6 mb-3">
+                            <div class="col-6">
                                 <label for="pressure" class="form-label">Pressure (kPa)</label>
                                 <input type="number" class="form-control" id="pressure" name="pressure" 
                                        step="0.1" value="425.0">
                             </div>
-                            <div class="col-md-6 mb-3">
+                            <div class="col-6">
                                 <label for="pressure_diff" class="form-label">Pressure Diff (kPa)</label>
                                 <input type="number" class="form-control" id="pressure_diff" name="pressure_diff" 
                                        step="0.1" value="10.0">
                             </div>
-                            <div class="col-md-6 mb-3">
+                            <div class="col-6">
                                 <label for="density" class="form-label">Density (kg/m³)</label>
                                 <input type="number" class="form-control" id="density" name="density" 
                                        step="0.001" value="0.729">
@@ -87,21 +106,29 @@
                         </div>
 
                         <!-- Environmental Presets -->
-                        <div class="mb-3">
+                        <div class="mb-3 mt-3">
                             <label class="form-label">Environmental Presets</label>
-                            <div class="d-flex flex-wrap gap-2">
-                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="setEnvPreset('winter')">
-                                    Winter
-                                </button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="setEnvPreset('spring')">
-                                    Spring
-                                </button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="setEnvPreset('summer')">
-                                    Summer
-                                </button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="setEnvPreset('fall')">
-                                    Fall
-                                </button>
+                            <div class="row g-2">
+                                <div class="col-6 col-sm-3">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary w-100" onclick="setEnvPreset('winter')">
+                                        Winter
+                                    </button>
+                                </div>
+                                <div class="col-6 col-sm-3">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary w-100" onclick="setEnvPreset('spring')">
+                                        Spring
+                                    </button>
+                                </div>
+                                <div class="col-6 col-sm-3">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary w-100" onclick="setEnvPreset('summer')">
+                                        Summer
+                                    </button>
+                                </div>
+                                <div class="col-6 col-sm-3">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary w-100" onclick="setEnvPreset('fall')">
+                                        Fall
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -117,13 +144,13 @@
                     </div>
 
                     <div id="pipe_fields" style="display: none;">
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
+                        <div class="row g-3">
+                            <div class="col-6">
                                 <label for="D_mm" class="form-label">Outer Diameter (mm)</label>
                                 <input type="number" class="form-control" id="D_mm" name="D_mm" 
                                        step="0.1" value="301.0">
                             </div>
-                            <div class="col-md-6 mb-3">
+                            <div class="col-6">
                                 <label for="d_mm" class="form-label">Inner Diameter (mm)</label>
                                 <input type="number" class="form-control" id="d_mm" name="d_mm" 
                                        step="0.1" value="184.0">
@@ -131,27 +158,41 @@
                         </div>
 
                         <!-- Pipe Presets -->
-                        <div class="mb-3">
+                        <div class="mb-3 mt-3">
                             <label class="form-label">Pipe Presets</label>
-                            <div class="d-flex flex-wrap gap-2">
-                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="setPipePreset('standard')">
-                                    Standard
-                                </button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="setPipePreset('large')">
-                                    Large
-                                </button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary" onclick="setPipePreset('extra_large')">
-                                    Extra Large
-                                </button>
+                            <div class="row g-2">
+                                <div class="col-4">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary w-100" onclick="setPipePreset('standard')">
+                                        Standard
+                                    </button>
+                                </div>
+                                <div class="col-4">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary w-100" onclick="setPipePreset('large')">
+                                        Large
+                                    </button>
+                                </div>
+                                <div class="col-4">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary w-100" onclick="setPipePreset('extra_large')">
+                                        Extra Large
+                                    </button>
+                                </div>
                             </div>
                         </div>
 
                         <!-- Real-time Pipe Calculations -->
                         <div class="alert alert-info">
                             <small>
-                                <strong>Wall Thickness:</strong> <span id="wall_thickness">58.5</span> mm<br>
-                                <strong>Cross-Section Area:</strong> <span id="cross_section_area">26,604</span> mm²<br>
-                                <strong>Diameter Ratio:</strong> <span id="diameter_ratio">1.64</span>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <strong>Wall Thickness:</strong> <span id="wall_thickness">58.5</span> mm
+                                    </div>
+                                    <div class="col-6">
+                                        <strong>Diameter Ratio:</strong> <span id="diameter_ratio">1.64</span>
+                                    </div>
+                                    <div class="col-12 mt-1">
+                                        <strong>Cross-Section Area:</strong> <span id="cross_section_area">26,604</span> mm²
+                                    </div>
+                                </div>
                             </small>
                         </div>
                     </div>
@@ -182,38 +223,61 @@
                         <div class="stat-label">Predicted Gas Usage</div>
                     </div>
 
-                    <div class="row">
+                    <div class="row g-3">
                         <div class="col-md-6">
                             <h6><i class="fas fa-calendar"></i> Prediction Details</h6>
-                            <p><strong>Date:</strong> {{ prediction.date }}</p>
-                            <p><strong>Season:</strong> {{ prediction.season }}</p>
-                            <p><strong>Confidence:</strong> 
-                                <span class="badge bg-{{ 'success' if prediction.confidence == 'High' else 'warning' if prediction.confidence == 'Medium' else 'secondary' }}">
-                                    {{ prediction.confidence }}
-                                </span>
-                            </p>
-                            <p><strong>Model:</strong> {{ prediction.model_version }}</p>
+                            <div class="row small">
+                                <div class="col-6 mb-2">
+                                    <strong>Date:</strong> {{ prediction.date }}
+                                </div>
+                                <div class="col-6 mb-2">
+                                    <strong>Season:</strong> {{ prediction.season }}
+                                </div>
+                                <div class="col-6 mb-2">
+                                    <strong>Confidence:</strong> 
+                                    <span class="badge bg-{{ 'success' if prediction.confidence == 'High' else 'warning' if prediction.confidence == 'Medium' else 'secondary' }}">
+                                        {{ prediction.confidence }}
+                                    </span>
+                                </div>
+                                <div class="col-6 mb-2">
+                                    <strong>Model:</strong> {{ prediction.model_version }}
+                                </div>
+                            </div>
                         </div>
                         <div class="col-md-6">
                             <h6><i class="fas fa-thermometer-half"></i> Conditions Used</h6>
-                            <p><strong>Temperature:</strong> {{ prediction.environmental_conditions.temperature }}°C</p>
-                            <p><strong>Pressure:</strong> {{ prediction.environmental_conditions.pressure }} kPa</p>
-                            <p><strong>Pressure Diff:</strong> {{ prediction.environmental_conditions.pressure_diff }} kPa</p>
-                            <p><strong>Density:</strong> {{ prediction.environmental_conditions.density }} kg/m³</p>
+                            <div class="row small">
+                                <div class="col-6 mb-1">
+                                    <strong>Temp:</strong> {{ prediction.environmental_conditions.temperature }}°C
+                                </div>
+                                <div class="col-6 mb-1">
+                                    <strong>Press:</strong> {{ prediction.environmental_conditions.pressure }} kPa
+                                </div>
+                                <div class="col-6 mb-1">
+                                    <strong>Press Diff:</strong> {{ prediction.environmental_conditions.pressure_diff }} kPa
+                                </div>
+                                <div class="col-6 mb-1">
+                                    <strong>Density:</strong> {{ prediction.environmental_conditions.density }} kg/m³
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="row mt-3">
+                    <div class="row mt-3 g-3">
                         <div class="col-12">
                             <h6><i class="fas fa-tools"></i> Pipe Configuration</h6>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <p><strong>Outer Diameter:</strong> {{ prediction.pipe_info.D_mm }} mm</p>
-                                    <p><strong>Inner Diameter:</strong> {{ prediction.pipe_info.d_mm }} mm</p>
+                            <div class="row small">
+                                <div class="col-6 col-sm-3 mb-1">
+                                    <strong>Outer:</strong> {{ prediction.pipe_info.D_mm }} mm
                                 </div>
-                                <div class="col-md-6">
-                                    <p><strong>Wall Thickness:</strong> {{ "%.1f"|format(prediction.pipe_info.wall_thickness) }} mm</p>
-                                    <p><strong>Cross-Section:</strong> {{ "%.0f"|format(prediction.pipe_info.cross_section_area) }} mm²</p>
+                                <div class="col-6 col-sm-3 mb-1">
+                                    <strong>Inner:</strong> {{ prediction.pipe_info.d_mm }} mm
+                                </div>
+                                <div class="col-6 col-sm-3 mb-1">
+                                    <strong>Wall:</strong> {{ "%.1f"|format(prediction.pipe_info.wall_thickness) }} mm
+                                </div>
+                                <div class="col-6 col-sm-3 mb-1">
+                                    <strong>Area:</strong> {{ "%.0f"|format(prediction.pipe_info.cross_section_area) }} mm²
                                 </div>
                             </div>
                         </div>
@@ -221,13 +285,21 @@
                 </div>
 
                 <!-- Action Buttons -->
-                <div class="d-flex gap-2 mt-3">
-                    <button class="btn btn-outline-primary" onclick="window.location.reload()">
-                        <i class="fas fa-redo"></i> New Prediction
-                    </button>
-                    <button class="btn btn-outline-success" onclick="savePrediction()">
-                        <i class="fas fa-save"></i> Save Result
-                    </button>
+                <div class="row g-2 mt-3">
+                    <div class="col-6">
+                        <button class="btn btn-outline-primary w-100" onclick="window.location.reload()">
+                            <i class="fas fa-redo"></i> 
+                            <span class="d-none d-sm-inline">New Prediction</span>
+                            <span class="d-inline d-sm-none">New</span>
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-outline-success w-100" onclick="savePrediction()">
+                            <i class="fas fa-save"></i> 
+                            <span class="d-none d-sm-inline">Save Result</span>
+                            <span class="d-inline d-sm-none">Save</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -242,34 +314,32 @@
                 <p>Choose any future date and time for prediction. The model works best for dates within the next few months.</p>
 
                 <h6><i class="fas fa-thermometer-half"></i> Environmental Conditions</h6>
-                <p>Enable custom environmental conditions to specify exact temperature, pressure, and density values. If disabled, seasonal defaults will be used based on the selected month.</p>
+                <p class="d-none d-md-block">Enable custom environmental conditions to specify exact temperature, pressure, and density values. If disabled, seasonal defaults will be used based on the selected month.</p>
+                <p class="d-block d-md-none">Use custom conditions or seasonal defaults based on the month.</p>
 
                 <h6><i class="fas fa-tools"></i> Pipe Configuration</h6>
-                <p>Customize pipe dimensions to see how different infrastructure affects gas usage. The model includes advanced pipe intelligence features.</p>
+                <p class="d-none d-md-block">Customize pipe dimensions to see how different infrastructure affects gas usage. The model includes advanced pipe intelligence features.</p>
+                <p class="d-block d-md-none">Customize pipe sizes to see their effect on gas usage.</p>
 
                 <div class="alert alert-success">
                     <h6><i class="fas fa-lightbulb"></i> Pro Tips</h6>
-                    <ul class="mb-0">
+                    <ul class="mb-0 small">
                         <li>Use quick presets for common scenarios</li>
                         <li>Higher confidence predictions need custom parameters</li>
-                        <li>Winter evenings typically show highest usage</li>
-                        <li>Larger inner diameter increases flow capacity</li>
+                        <li class="d-none d-md-list-item">Winter evenings typically show highest usage</li>
+                        <li class="d-none d-md-list-item">Larger inner diameter increases flow capacity</li>
                     </ul>
                 </div>
 
                 <h6><i class="fas fa-chart-bar"></i> Model Performance</h6>
-                <div class="row">
+                <div class="row text-center">
                     <div class="col-6">
-                        <div class="text-center">
-                            <div class="h4 text-success">98.59%</div>
-                            <small>Cross-Validation Accuracy</small>
-                        </div>
+                        <div class="h4 text-success">98.59%</div>
+                        <small>CV Accuracy</small>
                     </div>
                     <div class="col-6">
-                        <div class="text-center">
-                            <div class="h4 text-primary">1.65</div>
-                            <small>RMSE (m³/hour)</small>
-                        </div>
+                        <div class="h4 text-primary">1.65</div>
+                        <small>RMSE (m³/hour)</small>
                     </div>
                 </div>
             </div>
@@ -374,6 +444,9 @@
         
         // Initialize calculations
         updatePipeCalculations();
+
+        // Form validation
+        validateForm('predictionForm');
     });
 
     // Save prediction function
@@ -385,8 +458,12 @@
             confidence: '{{ prediction.confidence if prediction }}'
         };
         
-        localStorage.setItem('saved_prediction_' + Date.now(), JSON.stringify(predictionData));
-        showAlert('Prediction saved successfully!', 'success');
+        try {
+            localStorage.setItem('saved_prediction_' + Date.now(), JSON.stringify(predictionData));
+            showAlert('Prediction saved successfully!', 'success');
+        } catch (error) {
+            showAlert('Could not save prediction. Storage may be full.', 'warning');
+        }
     }
 </script>
 {% endblock %}

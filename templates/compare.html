@@ -7,16 +7,19 @@
     <div class="col-12">
         <div class="text-center mb-4">
             <h2 class="gradient-text">
-                <i class="fas fa-balance-scale"></i> Pipe Configuration Comparison
+                <i class="fas fa-balance-scale"></i> 
+                <span class="d-none d-sm-inline">Pipe Configuration Comparison</span>
+                <span class="d-inline d-sm-none">Pipe Comparison</span>
             </h2>
-            <p class="lead">Analyze how different pipe configurations affect gas usage predictions</p>
+            <p class="lead d-none d-md-block">Analyze how different pipe configurations affect gas usage predictions</p>
+            <p class="d-block d-md-none">Compare different pipe configurations</p>
         </div>
     </div>
 </div>
 
 <div class="row">
     <!-- Configuration Panel -->
-    <div class="col-lg-4">
+    <div class="col-lg-4 mb-4">
         <div class="card">
             <div class="card-header">
                 <i class="fas fa-cog"></i> Comparison Settings
@@ -42,20 +45,20 @@
                 </div>
 
                 <div id="env_fields_compare" style="display: none;">
-                    <div class="row">
-                        <div class="col-6 mb-2">
+                    <div class="row g-3">
+                        <div class="col-6">
                             <label class="form-label">Temp (°C)</label>
                             <input type="number" class="form-control form-control-sm" id="temp_compare" value="15.0" step="0.1">
                         </div>
-                        <div class="col-6 mb-2">
+                        <div class="col-6">
                             <label class="form-label">Pressure (kPa)</label>
                             <input type="number" class="form-control form-control-sm" id="pressure_compare" value="425.0" step="0.1">
                         </div>
-                        <div class="col-6 mb-2">
-                            <label class="form-label">Pressure Diff</label>
+                        <div class="col-6">
+                            <label class="form-label">Press Diff</label>
                             <input type="number" class="form-control form-control-sm" id="pressure_diff_compare" value="10.0" step="0.1">
                         </div>
-                        <div class="col-6 mb-2">
+                        <div class="col-6">
                             <label class="form-label">Density</label>
                             <input type="number" class="form-control form-control-sm" id="density_compare" value="0.729" step="0.001">
                         </div>
@@ -68,7 +71,7 @@
                     <div id="pipe_configs">
                         <!-- Default configurations will be added here -->
                     </div>
-                    <button type="button" class="btn btn-sm btn-outline-primary mt-2" onclick="addPipeConfig()">
+                    <button type="button" class="btn btn-sm btn-outline-primary mt-2 w-100" onclick="addPipeConfig()">
                         <i class="fas fa-plus"></i> Add Configuration
                     </button>
                 </div>
@@ -76,16 +79,22 @@
                 <!-- Preset Comparisons -->
                 <div class="mb-3">
                     <h6><i class="fas fa-magic"></i> Preset Comparisons</h6>
-                    <div class="d-grid gap-2">
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="loadComparisonPreset('standard_sizes')">
-                            <i class="fas fa-ruler"></i> Standard Sizes
-                        </button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="loadComparisonPreset('capacity_analysis')">
-                            <i class="fas fa-chart-bar"></i> Capacity Analysis
-                        </button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="loadComparisonPreset('wall_thickness')">
-                            <i class="fas fa-layer-group"></i> Wall Thickness Study
-                        </button>
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <button type="button" class="btn btn-sm btn-outline-secondary w-100" onclick="loadComparisonPreset('standard_sizes')">
+                                <i class="fas fa-ruler"></i> Standard
+                            </button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-sm btn-outline-secondary w-100" onclick="loadComparisonPreset('capacity_analysis')">
+                                <i class="fas fa-chart-bar"></i> Capacity
+                            </button>
+                        </div>
+                        <div class="col-12">
+                            <button type="button" class="btn btn-sm btn-outline-secondary w-100" onclick="loadComparisonPreset('wall_thickness')">
+                                <i class="fas fa-layer-group"></i> Wall Thickness Study
+                            </button>
+                        </div>
                     </div>
                 </div>
 
@@ -101,16 +110,18 @@
         <!-- Quick Stats -->
         <div class="card mt-3">
             <div class="card-header">
-                <i class="fas fa-info-circle"></i> Pipe Intelligence Insights
+                <i class="fas fa-info-circle"></i> 
+                <span class="d-none d-sm-inline">Pipe Intelligence Insights</span>
+                <span class="d-inline d-sm-none">Pipe Insights</span>
             </div>
             <div class="card-body">
                 <div class="alert alert-info">
                     <h6><i class="fas fa-lightbulb"></i> Key Factors</h6>
-                    <ul class="mb-0">
+                    <ul class="mb-0 small">
                         <li><strong>Inner Diameter:</strong> 0.787 correlation with flow</li>
                         <li><strong>Cross-Section Area:</strong> Primary flow determinant</li>
-                        <li><strong>Wall Thickness:</strong> -0.777 correlation (constraint)</li>
-                        <li><strong>Pressure Drop:</strong> Inversely related to diameter</li>
+                        <li class="d-none d-md-list-item"><strong>Wall Thickness:</strong> -0.777 correlation (constraint)</li>
+                        <li class="d-none d-md-list-item"><strong>Pressure Drop:</strong> Inversely related to diameter</li>
                     </ul>
                 </div>
                 
@@ -127,7 +138,7 @@
     <!-- Results Panel -->
     <div class="col-lg-8">
         <div class="card">
-            <div class="card-header d-flex justify-content-between">
+            <div class="card-header d-flex justify-content-between align-items-center">
                 <span><i class="fas fa-chart-bar"></i> Comparison Results</span>
                 <div id="comparison_status" class="badge bg-secondary">Ready</div>
             </div>
@@ -135,14 +146,16 @@
                 <div id="comparison_results" class="text-center text-muted py-5">
                     <i class="fas fa-balance-scale fa-3x mb-3"></i>
                     <h5>Ready for Pipe Comparison</h5>
-                    <p>Configure your pipe settings and click "Run Comparison" to see detailed analysis.</p>
+                    <p class="d-none d-md-block">Configure your pipe settings and click "Run Comparison" to see detailed analysis.</p>
+                    <p class="d-block d-md-none">Configure pipes and run comparison.</p>
                 </div>
 
                 <!-- Loading State -->
                 <div id="comparison_loading" class="text-center py-5" style="display: none;">
                     <div class="spinner-border text-primary mb-3" role="status"></div>
                     <h5>Analyzing Pipe Configurations...</h5>
-                    <p class="text-muted">Running predictions for each configuration</p>
+                    <p class="text-muted d-none d-md-block">Running predictions for each configuration</p>
+                    <p class="text-muted d-block d-md-none">Running predictions...</p>
                 </div>
             </div>
         </div>
@@ -153,14 +166,14 @@
                 <i class="fas fa-microscope"></i> Detailed Analysis
             </div>
             <div class="card-body">
-                <div class="row">
-                    <div class="col-md-6">
+                <div class="row g-3">
+                    <div class="col-lg-6">
                         <h6><i class="fas fa-trophy"></i> Best Performing Configuration</h6>
                         <div id="best_config_details" class="alert alert-success">
                             <!-- Best configuration details will be inserted here -->
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-lg-6">
                         <h6><i class="fas fa-chart-line"></i> Performance Insights</h6>
                         <div id="performance_insights">
                             <!-- Performance insights will be inserted here -->
@@ -170,7 +183,7 @@
 
                 <!-- Recommendations -->
                 <div class="mt-3">
-                    <h6><i class="fas fa-recommendations"></i> Recommendations</h6>
+                    <h6><i class="fas fa-lightbulb"></i> Recommendations</h6>
                     <div id="recommendations" class="alert alert-info">
                         <!-- Recommendations will be inserted here -->
                     </div>
@@ -186,7 +199,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title"><i class="fas fa-chart-area"></i> Pipe Performance Visualization</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="row">
@@ -295,18 +308,18 @@
                 <div class="d-flex justify-content-between align-items-center mb-2">
                     <input type="text" class="form-control form-control-sm" value="${config.name}" 
                            onchange="updateConfigName(${index}, this.value)" style="max-width: 120px;">
-                    <button class="btn btn-sm btn-outline-danger" onclick="removeConfig(${index})">
+                    <button class="btn btn-sm btn-outline-danger ms-1" onclick="removeConfig(${index})">
                         <i class="fas fa-trash"></i>
                     </button>
                 </div>
-                <div class="row">
+                <div class="row g-2">
                     <div class="col-6">
-                        <label class="form-label">D (mm)</label>
+                        <label class="form-label small">D (mm)</label>
                         <input type="number" class="form-control form-control-sm" value="${config.D_mm}" 
                                onchange="updateConfigValue(${index}, 'D_mm', this.value)" step="0.1">
                     </div>
                     <div class="col-6">
-                        <label class="form-label">d (mm)</label>
+                        <label class="form-label small">d (mm)</label>
                         <input type="number" class="form-control form-control-sm" value="${config.d_mm}" 
                                onchange="updateConfigValue(${index}, 'd_mm', this.value)" step="0.1">
                     </div>
@@ -414,14 +427,14 @@
         // Main results table
         const tableHtml = `
             <div class="table-responsive">
-                <table class="table table-hover">
+                <table class="table table-hover table-sm">
                     <thead class="table-dark">
                         <tr>
                             <th>Rank</th>
                             <th>Configuration</th>
-                            <th>Predicted Volume</th>
-                            <th>Pipe Details</th>
-                            <th>Efficiency</th>
+                            <th>Volume</th>
+                            <th class="d-none d-md-table-cell">Pipe Details</th>
+                            <th class="d-none d-lg-table-cell">Efficiency</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -439,21 +452,21 @@
                                     </td>
                                     <td>
                                         <div style="border-left: 4px solid ${config?.color || '#666'}; padding-left: 8px;">
-                                            <strong>${result.config_name}</strong>
+                                            <strong class="small">${result.config_name}</strong>
                                         </div>
                                     </td>
                                     <td>
-                                        <span class="h5 text-primary">${result.prediction.predicted_volume}</span>
+                                        <span class="h6 text-primary">${result.prediction.predicted_volume}</span>
                                         <small class="text-muted d-block">m³/hour</small>
                                     </td>
-                                    <td>
+                                    <td class="d-none d-md-table-cell">
                                         <small>
                                             D: ${result.prediction.pipe_info.D_mm}mm<br>
                                             d: ${result.prediction.pipe_info.d_mm}mm<br>
                                             Area: ${Math.round(result.prediction.pipe_info.cross_section_area).toLocaleString()}mm²
                                         </small>
                                     </td>
-                                    <td>
+                                    <td class="d-none d-lg-table-cell">
                                         <span class="badge bg-${efficiency > 0.0008 ? 'success' : efficiency > 0.0006 ? 'warning' : 'danger'}">
                                             ${efficiency.toFixed(6)}
                                         </span>
@@ -472,15 +485,29 @@
             </div>
             
             <div class="text-center mt-3">
-                <button class="btn btn-primary me-2" onclick="visualizeComparison()">
-                    <i class="fas fa-chart-area"></i> Visualize Results
-                </button>
-                <button class="btn btn-success me-2" onclick="downloadComparisonCSV()">
-                    <i class="fas fa-download"></i> Download CSV
-                </button>
-                <button class="btn btn-info" onclick="generateReport()">
-                    <i class="fas fa-file-alt"></i> Generate Report
-                </button>
+                <div class="row g-2">
+                    <div class="col-12 col-sm-4">
+                        <button class="btn btn-primary w-100" onclick="visualizeComparison()">
+                            <i class="fas fa-chart-area"></i> 
+                            <span class="d-none d-lg-inline">Visualize Results</span>
+                            <span class="d-inline d-lg-none">Charts</span>
+                        </button>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <button class="btn btn-success w-100" onclick="downloadComparisonCSV()">
+                            <i class="fas fa-download"></i> 
+                            <span class="d-none d-lg-inline">Download CSV</span>
+                            <span class="d-inline d-lg-none">CSV</span>
+                        </button>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                        <button class="btn btn-info w-100" onclick="generateReport()">
+                            <i class="fas fa-file-alt"></i> 
+                            <span class="d-none d-lg-inline">Generate Report</span>
+                            <span class="d-inline d-lg-none">Report</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         `;
         
@@ -502,14 +529,14 @@
             <h6><i class="fas fa-trophy"></i> ${bestConfig.config_name}</h6>
             <div class="row">
                 <div class="col-6">
-                    <strong>Predicted Volume:</strong> ${bestPred.predicted_volume} m³/hour<br>
+                    <strong>Volume:</strong> ${bestPred.predicted_volume} m³/hour<br>
                     <strong>Confidence:</strong> ${bestPred.confidence}<br>
                     <strong>Season:</strong> ${bestPred.season}
                 </div>
                 <div class="col-6">
-                    <strong>Inner Diameter:</strong> ${bestPred.pipe_info.d_mm} mm<br>
-                    <strong>Cross-Section:</strong> ${Math.round(bestPred.pipe_info.cross_section_area).toLocaleString()} mm²<br>
-                    <strong>Wall Thickness:</strong> ${bestPred.pipe_info.wall_thickness.toFixed(1)} mm
+                    <strong>Inner:</strong> ${bestPred.pipe_info.d_mm} mm<br>
+                    <strong>Area:</strong> ${Math.round(bestPred.pipe_info.cross_section_area).toLocaleString()} mm²<br>
+                    <strong>Wall:</strong> ${bestPred.pipe_info.wall_thickness.toFixed(1)} mm
                 </div>
             </div>
         `;
@@ -535,7 +562,7 @@
                     <small>Min Volume</small>
                 </div>
             </div>
-            <div class="mt-2">
+            <div class="mt-2 small">
                 <strong>Volume Range:</strong> ${(maxVolume - minVolume).toFixed(1)} m³/hour<br>
                 <strong>Best vs Worst:</strong> ${((maxVolume - minVolume) / minVolume * 100).toFixed(1)}% difference
             </div>
@@ -552,11 +579,11 @@
             recommendations.push("Thinner walls allow for larger inner diameter in same outer size");
         }
         if (maxVolume - minVolume > 5) {
-            recommendations.push("Pipe configuration significantly impacts performance - choose carefully");
+            recommendations.push("Pipe configuration significantly impacts performance");
         }
         
         document.getElementById('recommendations').innerHTML = `
-            <ul class="mb-0">
+            <ul class="mb-0 small">
                 ${recommendations.map(rec => `<li>${rec}</li>`).join('')}
                 <li><strong>Recommended:</strong> ${bestConfig.config_name} for maximum flow capacity</li>
             </ul>
@@ -731,6 +758,10 @@
         `;
         
         showAlert(details, 'info');
+    }
+
+    function downloadChartData() {
+        downloadComparisonCSV();
     }
 </script>
 {% endblock %}
