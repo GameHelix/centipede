@@ -560,11 +560,16 @@ def round2_filter(value):
         return value
 
 # Initialize the application
-if __name__ == '__main__':
-    try:
-        load_model()
-        logger.info("Gas Usage Prediction Full Stack App starting...")
-        app.run(debug=True, host='0.0.0.0', port=5000)
-    except Exception as e:
-        logger.error(f"Failed to start application: {str(e)}")
-        exit(1)
+# Production configuration
+if __name__ != '__main__':
+    # Gunicorn configuration
+    import logging
+    logging.basicConfig(level=logging.INFO)
+    
+    # Ensure model is loaded
+    if model is None:
+        try:
+            load_model()
+            logger.info("Model loaded successfully in production")
+        except Exception as e:
+            logger.error(f"Failed to load model in production: {e}")
