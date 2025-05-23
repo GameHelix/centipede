@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>{% block title %}Gas Usage Prediction System{% endblock %}</title>
     
     <!-- Bootstrap CSS -->
@@ -21,17 +21,41 @@
             --danger-color: #e74c3c;
             --light-bg: #f8f9fa;
             --dark-bg: #343a40;
+            --navbar-height: 70px;
+            --footer-height: 120px;
+        }
+
+        /* Base Styles */
+        html {
+            height: 100%;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--light-bg);
             line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding-top: var(--navbar-height);
         }
 
+        /* Main Content Area */
+        main {
+            flex: 1 0 auto;
+            padding-bottom: 2rem;
+        }
+
+        /* Navigation Styles */
         .navbar {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1030;
+            height: var(--navbar-height);
         }
 
         .navbar-brand {
@@ -41,8 +65,9 @@
 
         .navbar-nav .nav-link {
             font-weight: 500;
-            margin: 0 10px;
+            margin: 0 5px;
             transition: all 0.3s ease;
+            padding: 0.5rem 0.75rem;
         }
 
         .navbar-nav .nav-link:hover {
@@ -50,16 +75,27 @@
             color: #fff !important;
         }
 
+        /* Mobile Navigation */
+        .navbar-toggler {
+            border: none;
+            padding: 0.25rem 0.5rem;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        /* Card Styles */
         .card {
             border: none;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             transition: all 0.3s ease;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
 
@@ -72,13 +108,18 @@
             font-weight: 600;
         }
 
+        /* Button Styles */
+        .btn {
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            min-height: 44px; /* Better touch target for mobile */
+        }
+
         .btn-primary {
             background: linear-gradient(135deg, var(--secondary-color), #2980b9);
             border: none;
-            border-radius: 25px;
-            padding: 10px 25px;
-            font-weight: 500;
-            transition: all 0.3s ease;
         }
 
         .btn-primary:hover {
@@ -90,24 +131,20 @@
         .btn-success {
             background: linear-gradient(135deg, var(--success-color), #229954);
             border: none;
-            border-radius: 25px;
-            padding: 10px 25px;
-            font-weight: 500;
         }
 
         .btn-warning {
             background: linear-gradient(135deg, var(--warning-color), #e67e22);
             border: none;
-            border-radius: 25px;
-            padding: 10px 25px;
-            font-weight: 500;
         }
 
+        /* Form Styles */
         .form-control, .form-select {
             border-radius: 10px;
             border: 2px solid #e9ecef;
             padding: 12px 15px;
             transition: all 0.3s ease;
+            min-height: 44px; /* Better touch target */
         }
 
         .form-control:focus, .form-select:focus {
@@ -115,26 +152,30 @@
             box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
         }
 
+        /* Alert Styles */
         .alert {
             border-radius: 12px;
             border: none;
             margin-bottom: 1rem;
         }
 
+        /* Prediction Result Styles */
         .prediction-result {
             background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
             border-radius: 15px;
-            padding: 2rem;
-            margin: 2rem 0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
             border-left: 5px solid var(--success-color);
         }
 
+        /* Stat Card Styles */
         .stat-card {
             text-align: center;
             padding: 1.5rem;
             border-radius: 15px;
             background: white;
             border-left: 4px solid var(--secondary-color);
+            margin-bottom: 1rem;
         }
 
         .stat-number {
@@ -152,19 +193,23 @@
             letter-spacing: 1px;
         }
 
+        /* Footer Styles - Fixed positioning issues */
         .footer {
             background: var(--dark-bg);
             color: white;
             padding: 2rem 0;
-            margin-top: 4rem;
+            margin-top: auto;
+            flex-shrink: 0;
+            min-height: var(--footer-height);
         }
 
+        /* Utility Classes */
         .loading {
             display: none;
         }
 
         .loading.show {
-            display: inline-block;
+            display: block;
         }
 
         .feature-icon {
@@ -181,22 +226,17 @@
             font-weight: bold;
         }
 
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 15px;
-            }
-            
-            .card {
-                margin-bottom: 1rem;
-            }
-            
-            .stat-number {
-                font-size: 2rem;
-            }
+        /* Table Responsiveness */
+        .table-responsive {
+            border-radius: 10px;
+            overflow-x: auto;
         }
 
-        /* Animation classes */
+        .table {
+            margin-bottom: 0;
+        }
+
+        /* Animation Classes */
         .fade-in {
             animation: fadeIn 0.6s ease-in-out;
         }
@@ -215,6 +255,205 @@
             50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
+
+        /* Mobile Specific Styles */
+        @media (max-width: 768px) {
+            :root {
+                --navbar-height: 80px;
+                --footer-height: 160px;
+            }
+
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+            .card {
+                margin-bottom: 1rem;
+                border-radius: 10px;
+            }
+
+            .card-header {
+                padding: 0.75rem 1rem;
+                font-size: 0.95rem;
+            }
+
+            .card-body {
+                padding: 1rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .feature-icon {
+                font-size: 2.5rem;
+            }
+
+            .navbar-brand {
+                font-size: 1.2rem;
+            }
+
+            .navbar-nav .nav-link {
+                margin: 0;
+                padding: 0.75rem 1rem;
+            }
+
+            /* Mobile form improvements */
+            .form-control, .form-select {
+                font-size: 16px; /* Prevent zoom on iOS */
+                padding: 12px;
+            }
+
+            /* Mobile button improvements */
+            .btn {
+                width: 100%;
+                margin-bottom: 0.5rem;
+                padding: 12px 20px;
+            }
+
+            .btn-sm {
+                width: auto;
+                padding: 8px 16px;
+                margin-bottom: 0.25rem;
+            }
+
+            /* Mobile table improvements */
+            .table-responsive {
+                font-size: 0.875rem;
+            }
+
+            /* Mobile spacing */
+            .mb-3 {
+                margin-bottom: 1rem !important;
+            }
+
+            .mb-4 {
+                margin-bottom: 1.5rem !important;
+            }
+
+            .mb-5 {
+                margin-bottom: 2rem !important;
+            }
+
+            /* Mobile text sizes */
+            .lead {
+                font-size: 1.1rem;
+            }
+
+            h1, .h1 {
+                font-size: 2rem;
+            }
+
+            h2, .h2 {
+                font-size: 1.75rem;
+            }
+
+            h3, .h3 {
+                font-size: 1.5rem;
+            }
+
+            /* Mobile modal improvements */
+            .modal-dialog {
+                margin: 0.5rem;
+            }
+
+            .modal-body {
+                padding: 1rem;
+            }
+
+            /* Mobile footer */
+            .footer {
+                text-align: center;
+                padding: 1.5rem 0;
+            }
+
+            .footer .row {
+                text-align: center;
+            }
+
+            .footer .col-md-6 {
+                margin-bottom: 1rem;
+            }
+        }
+
+        /* Small mobile screens */
+        @media (max-width: 576px) {
+            .container {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .prediction-result {
+                padding: 1rem;
+            }
+
+            .stat-card {
+                padding: 1rem;
+            }
+
+            /* Stack buttons on small screens */
+            .d-flex.gap-2 {
+                flex-direction: column;
+                gap: 0.5rem !important;
+            }
+
+            .d-flex.gap-3 {
+                flex-direction: column;
+                gap: 0.75rem !important;
+            }
+
+            /* Ensure buttons don't break layout */
+            .btn-group-vertical .btn {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        /* Large screens */
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1140px;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .navbar,
+            .footer,
+            .btn,
+            .alert {
+                display: none !important;
+            }
+
+            body {
+                padding-top: 0;
+            }
+
+            .card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+
+        /* Focus styles for accessibility */
+        .btn:focus,
+        .form-control:focus,
+        .form-select:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .card {
+                border: 2px solid #333;
+            }
+            
+            .btn-primary {
+                background: #0066cc;
+                border: 2px solid #0066cc;
+            }
+        }
     </style>
     
     {% block extra_css %}{% endblock %}
@@ -224,10 +463,12 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="{{ url_for('index') }}">
-                <i class="fas fa-fire"></i> Gas Usage Prediction
+                <i class="fas fa-fire"></i> 
+                <span class="d-none d-sm-inline">Gas Usage Prediction</span>
+                <span class="d-inline d-sm-none">GUP</span>
             </a>
             
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
@@ -235,36 +476,41 @@
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('index') }}">
-                            <i class="fas fa-home"></i> Dashboard
+                            <i class="fas fa-home"></i> 
+                            <span class="d-lg-inline">Dashboard</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('predict_page') }}">
-                            <i class="fas fa-chart-line"></i> Predict
+                            <i class="fas fa-chart-line"></i> 
+                            <span class="d-lg-inline">Predict</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('batch_page') }}">
-                            <i class="fas fa-list"></i> Batch Predict
+                            <i class="fas fa-list"></i> 
+                            <span class="d-lg-inline">Batch</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('compare_page') }}">
-                            <i class="fas fa-balance-scale"></i> Compare Pipes
+                            <i class="fas fa-balance-scale"></i> 
+                            <span class="d-lg-inline">Compare</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('about_page') }}">
-                            <i class="fas fa-info-circle"></i> About
+                            <i class="fas fa-info-circle"></i> 
+                            <span class="d-lg-inline">About</span>
                         </a>
                     </li>
                 </ul>
                 
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <span class="navbar-text">
+                        <span class="navbar-text small">
                             <i class="fas fa-circle text-success"></i> 
-                            Model: {{ model_info.version if model_info else 'v3.0' }}
+                            <span class="d-none d-md-inline">Model: </span>{{ model_info.version if model_info else 'v3.0' }}
                         </span>
                     </li>
                 </ul>
@@ -281,7 +527,7 @@
                     <div class="alert alert-{{ 'danger' if category == 'error' else category }} alert-dismissible fade show fade-in" role="alert">
                         <i class="fas fa-{{ 'exclamation-triangle' if category == 'error' else 'check-circle' if category == 'success' else 'info-circle' }}"></i>
                         {{ message }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 {% endfor %}
             {% endif %}
@@ -293,16 +539,28 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h5><i class="fas fa-fire"></i> Gas Usage Prediction System</h5>
-                    <p class="mb-0">Advanced ML-powered natural gas consumption forecasting with 98.59% accuracy.</p>
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <h5 class="mb-2">
+                        <i class="fas fa-fire"></i> 
+                        <span class="d-none d-sm-inline">Gas Usage Prediction System</span>
+                        <span class="d-inline d-sm-none">GUP System</span>
+                    </h5>
+                    <p class="mb-0 small">Advanced ML-powered natural gas consumption forecasting with 98.59% accuracy.</p>
                 </div>
-                <div class="col-md-6 text-md-end">
-                    <p class="mb-0">
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-1 small">
                         <i class="fas fa-robot"></i> Powered by Ridge Regression & Pipe Intelligence
                     </p>
                     <small class="text-muted">© 2025 - Built with Flask & Bootstrap</small>
+                    <div class="mt-2">
+                        <a href="https://github.com/Ismat-Samadov/gas_usage_prediction" target="_blank" class="text-light me-2" title="GitHub Repository">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://ismat.pro" target="_blank" class="text-light" title="Developer Website">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -331,41 +589,111 @@
 
         function showAlert(message, type = 'info') {
             const alertDiv = document.createElement('div');
-            alertDiv.className = `alert alert-${type} alert-dismissible fade show fade-in`;
+            alertDiv.className = `alert alert-${type === 'error' ? 'danger' : type} alert-dismissible fade show fade-in`;
             alertDiv.innerHTML = `
-                <i class="fas fa-${type === 'error' ? 'exclamation-triangle' : 'info-circle'}"></i>
+                <i class="fas fa-${type === 'error' ? 'exclamation-triangle' : type === 'success' ? 'check-circle' : 'info-circle'}"></i>
                 ${message}
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             `;
             
             const container = document.querySelector('main .container');
-            container.insertBefore(alertDiv, container.firstChild);
-            
-            // Auto-dismiss after 5 seconds
-            setTimeout(() => {
-                alertDiv.remove();
-            }, 5000);
+            if (container) {
+                container.insertBefore(alertDiv, container.firstChild);
+                
+                // Auto-dismiss after 5 seconds
+                setTimeout(() => {
+                    if (alertDiv.parentNode) {
+                        alertDiv.remove();
+                    }
+                }, 5000);
+            }
         }
 
         // Auto-hide flash messages after 5 seconds
         document.addEventListener('DOMContentLoaded', function() {
             const alerts = document.querySelectorAll('.alert');
-            alerts.forEach(alert => {
+            alerts.forEach((alert, index) => {
                 setTimeout(() => {
-                    const bsAlert = new bootstrap.Alert(alert);
-                    bsAlert.close();
-                }, 5000);
+                    if (alert.parentNode) {
+                        const bsAlert = bootstrap.Alert.getOrCreateInstance(alert);
+                        bsAlert.close();
+                    }
+                }, 5000 + (index * 500)); // Stagger dismissal
             });
-        });
 
-        // Add fade-in animation to cards
-        document.addEventListener('DOMContentLoaded', function() {
+            // Add fade-in animation to cards
             const cards = document.querySelectorAll('.card');
             cards.forEach((card, index) => {
                 setTimeout(() => {
                     card.classList.add('fade-in');
                 }, index * 100);
             });
+
+            // Navbar collapse on click for mobile
+            const navbarNav = document.getElementById('navbarNav');
+            const navLinks = navbarNav.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth < 992) { // Bootstrap lg breakpoint
+                        const navbar = bootstrap.Collapse.getInstance(navbarNav);
+                        if (navbar) {
+                            navbar.hide();
+                        }
+                    }
+                });
+            });
+
+            // Add touch feedback for mobile
+            if ('ontouchstart' in window) {
+                document.body.classList.add('touch-device');
+            }
+        });
+
+        // Responsive table handling
+        function makeTablesResponsive() {
+            const tables = document.querySelectorAll('table:not(.table-responsive table)');
+            tables.forEach(table => {
+                if (!table.parentElement.classList.contains('table-responsive')) {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'table-responsive';
+                    table.parentNode.insertBefore(wrapper, table);
+                    wrapper.appendChild(table);
+                }
+            });
+        }
+
+        // Handle form validation
+        function validateForm(formId) {
+            const form = document.getElementById(formId);
+            if (form) {
+                form.addEventListener('submit', function(event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        showAlert('Please fill in all required fields correctly.', 'error');
+                    }
+                    form.classList.add('was-validated');
+                });
+            }
+        }
+
+        // Mobile-specific improvements
+        if (window.innerWidth <= 768) {
+            // Prevent zoom on input focus for iOS
+            document.addEventListener('DOMContentLoaded', function() {
+                const inputs = document.querySelectorAll('input[type="text"], input[type="number"], input[type="email"], input[type="password"], textarea, select');
+                inputs.forEach(input => {
+                    if (input.style.fontSize !== '16px') {
+                        input.style.fontSize = '16px';
+                    }
+                });
+            });
+        }
+
+        // Performance optimization
+        window.addEventListener('load', function() {
+            makeTablesResponsive();
         });
     </script>
     

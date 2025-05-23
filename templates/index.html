@@ -5,9 +5,11 @@
 {% block content %}
 <div class="row">
     <div class="col-12">
-        <div class="text-center mb-5">
-            <h1 class="display-4 gradient-text">
-                <i class="fas fa-fire"></i> Gas Usage Prediction System
+        <div class="text-center mb-4">
+            <h1 class="display-5 display-md-4 gradient-text">
+                <i class="fas fa-fire"></i> 
+                <span class="d-none d-sm-inline">Gas Usage Prediction System</span>
+                <span class="d-inline d-sm-none">GUP System</span>
             </h1>
             <p class="lead">Advanced ML-powered natural gas consumption forecasting with 98.59% accuracy</p>
             <div class="badge bg-success fs-6 mb-3">
@@ -18,26 +20,26 @@
 </div>
 
 <!-- Quick Stats -->
-<div class="row mb-5">
-    <div class="col-md-3 col-sm-6 mb-3">
+<div class="row mb-4">
+    <div class="col-6 col-md-3 mb-3">
         <div class="stat-card">
             <div class="stat-number">98.59%</div>
             <div class="stat-label">CV Accuracy</div>
         </div>
     </div>
-    <div class="col-md-3 col-sm-6 mb-3">
+    <div class="col-6 col-md-3 mb-3">
         <div class="stat-card">
             <div class="stat-number">35</div>
             <div class="stat-label">Clean Features</div>
         </div>
     </div>
-    <div class="col-md-3 col-sm-6 mb-3">
+    <div class="col-6 col-md-3 mb-3">
         <div class="stat-card">
             <div class="stat-number">6.6</div>
             <div class="stat-label">Years of Data</div>
         </div>
     </div>
-    <div class="col-md-3 col-sm-6 mb-3">
+    <div class="col-6 col-md-3 mb-3">
         <div class="stat-card">
             <div class="stat-number">57K</div>
             <div class="stat-label">Training Samples</div>
@@ -53,12 +55,12 @@
             <div class="card-header">
                 <i class="fas fa-chart-line"></i> Single Prediction
             </div>
-            <div class="card-body text-center">
+            <div class="card-body text-center d-flex flex-column">
                 <div class="feature-icon">
                     <i class="fas fa-search"></i>
                 </div>
                 <h5 class="card-title">Quick Prediction</h5>
-                <p class="card-text">
+                <p class="card-text flex-grow-1">
                     Get instant gas usage predictions for any date and time with custom environmental and pipe parameters.
                 </p>
                 <div class="mt-auto">
@@ -76,12 +78,12 @@
             <div class="card-header">
                 <i class="fas fa-list"></i> Batch Prediction
             </div>
-            <div class="card-body text-center">
+            <div class="card-body text-center d-flex flex-column">
                 <div class="feature-icon">
                     <i class="fas fa-layer-group"></i>
                 </div>
                 <h5 class="card-title">Multiple Predictions</h5>
-                <p class="card-text">
+                <p class="card-text flex-grow-1">
                     Process multiple prediction requests at once. Perfect for planning and analysis tasks.
                 </p>
                 <div class="mt-auto">
@@ -94,17 +96,17 @@
     </div>
 
     <!-- Pipe Comparison -->
-    <div class="col-lg-4 col-md-6 mb-4">
+    <div class="col-lg-4 col-md-12 mb-4">
         <div class="card h-100">
             <div class="card-header">
                 <i class="fas fa-balance-scale"></i> Pipe Comparison
             </div>
-            <div class="card-body text-center">
+            <div class="card-body text-center d-flex flex-column">
                 <div class="feature-icon">
                     <i class="fas fa-project-diagram"></i>
                 </div>
                 <h5 class="card-title">Infrastructure Analysis</h5>
-                <p class="card-text">
+                <p class="card-text flex-grow-1">
                     Compare different pipe configurations to optimize your gas distribution system.
                 </p>
                 <div class="mt-auto">
@@ -118,7 +120,7 @@
 </div>
 
 <!-- Model Information -->
-<div class="row mt-5">
+<div class="row mt-4">
     <div class="col-12">
         <div class="card">
             <div class="card-header">
@@ -126,23 +128,39 @@
             </div>
             <div class="card-body">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-lg-6 mb-3 mb-lg-0">
                         <h6><i class="fas fa-robot"></i> Model Details</h6>
-                        <ul class="list-unstyled">
-                            <li><strong>Algorithm:</strong> Ridge Regression</li>
-                            <li><strong>Version:</strong> {{ model_info.version if model_info else 'v3.0 (Clean)' }}</li>
-                            <li><strong>Training Date:</strong> {{ model_info.created_date if model_info else 'Recent' }}</li>
-                            <li><strong>Features:</strong> {{ model_info.total_features if model_info else '35' }} clean features</li>
-                        </ul>
+                        <div class="row">
+                            <div class="col-sm-6 mb-2">
+                                <strong>Algorithm:</strong> Ridge Regression
+                            </div>
+                            <div class="col-sm-6 mb-2">
+                                <strong>Version:</strong> {{ model_info.version if model_info else 'v3.0 (Clean)' }}
+                            </div>
+                            <div class="col-sm-6 mb-2">
+                                <strong>Training Date:</strong> {{ model_info.created_date if model_info else 'Recent' }}
+                            </div>
+                            <div class="col-sm-6 mb-2">
+                                <strong>Features:</strong> {{ model_info.total_features if model_info else '35' }} clean features
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-lg-6">
                         <h6><i class="fas fa-chart-bar"></i> Performance Metrics</h6>
-                        <ul class="list-unstyled">
-                            <li><strong>CV R²:</strong> {{ model_info.performance.cv_r2_percent if model_info and model_info.performance else '98.59%' }}</li>
-                            <li><strong>Training RMSE:</strong> {{ model_info.performance.train_rmse if model_info and model_info.performance else '1.65 m³/hour' }}</li>
-                            <li><strong>Training MAE:</strong> {{ model_info.performance.train_mae if model_info and model_info.performance else '0.92 m³/hour' }}</li>
-                            <li><strong>Data Leakage:</strong> <span class="text-success">✓ Clean</span></li>
-                        </ul>
+                        <div class="row">
+                            <div class="col-sm-6 mb-2">
+                                <strong>CV R²:</strong> {{ model_info.performance.cv_r2_percent if model_info and model_info.performance else '98.59%' }}
+                            </div>
+                            <div class="col-sm-6 mb-2">
+                                <strong>Training RMSE:</strong> {{ model_info.performance.train_rmse if model_info and model_info.performance else '1.65 m³/hour' }}
+                            </div>
+                            <div class="col-sm-6 mb-2">
+                                <strong>Training MAE:</strong> {{ model_info.performance.train_mae if model_info and model_info.performance else '0.92 m³/hour' }}
+                            </div>
+                            <div class="col-sm-6 mb-2">
+                                <strong>Data Leakage:</strong> <span class="text-success">✓ Clean</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="row mt-3">
@@ -175,25 +193,31 @@
                 <i class="fas fa-rocket"></i> Quick Actions
             </div>
             <div class="card-body">
-                <div class="row">
-                    <div class="col-md-4 mb-3">
+                <div class="row g-3">
+                    <div class="col-lg-4 col-md-6">
                         <div class="d-grid">
                             <button class="btn btn-outline-primary" onclick="quickPredict('2025-01-15T18:00')">
-                                <i class="fas fa-snowflake"></i> Winter Evening Prediction
+                                <i class="fas fa-snowflake"></i> 
+                                <span class="d-none d-sm-inline">Winter Evening Prediction</span>
+                                <span class="d-inline d-sm-none">Winter Prediction</span>
                             </button>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3">
+                    <div class="col-lg-4 col-md-6">
                         <div class="d-grid">
                             <button class="btn btn-outline-success" onclick="quickPredict('2025-07-15T12:00')">
-                                <i class="fas fa-sun"></i> Summer Midday Prediction
+                                <i class="fas fa-sun"></i> 
+                                <span class="d-none d-sm-inline">Summer Midday Prediction</span>
+                                <span class="d-inline d-sm-none">Summer Prediction</span>
                             </button>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3">
+                    <div class="col-lg-4 col-md-12">
                         <div class="d-grid">
                             <button class="btn btn-outline-warning" onclick="window.location.href='{{ url_for('compare_page') }}'">
-                                <i class="fas fa-tools"></i> Compare Pipe Sizes
+                                <i class="fas fa-tools"></i> 
+                                <span class="d-none d-sm-inline">Compare Pipe Sizes</span>
+                                <span class="d-inline d-sm-none">Compare Pipes</span>
                             </button>
                         </div>
                     </div>
@@ -244,38 +268,50 @@
                 contentDiv.innerHTML = `
                     <div class="prediction-result">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6 mb-3 mb-md-0">
                                 <h5><i class="fas fa-calendar"></i> Prediction Details</h5>
-                                <p><strong>Date:</strong> ${formatDateTime(prediction.date)}</p>
-                                <p><strong>Season:</strong> ${prediction.season}</p>
-                                <p><strong>Confidence:</strong> 
-                                    <span class="badge bg-${prediction.confidence === 'High' ? 'success' : prediction.confidence === 'Medium' ? 'warning' : 'secondary'}">
-                                        ${prediction.confidence}
-                                    </span>
-                                </p>
+                                <div class="row">
+                                    <div class="col-sm-6 mb-2">
+                                        <strong>Date:</strong> ${formatDateTime(prediction.date)}
+                                    </div>
+                                    <div class="col-sm-6 mb-2">
+                                        <strong>Season:</strong> ${prediction.season}
+                                    </div>
+                                    <div class="col-sm-6 mb-2">
+                                        <strong>Confidence:</strong> 
+                                        <span class="badge bg-${prediction.confidence === 'High' ? 'success' : prediction.confidence === 'Medium' ? 'warning' : 'secondary'}">
+                                            ${prediction.confidence}
+                                        </span>
+                                    </div>
+                                    <div class="col-sm-6 mb-2">
+                                        <strong>Model:</strong> ${prediction.model_version}
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-md-6">
                                 <h5><i class="fas fa-fire"></i> Predicted Usage</h5>
-                                <div class="stat-number text-primary">${prediction.predicted_volume} m³/hour</div>
-                                <p class="text-muted">Natural Gas Consumption</p>
+                                <div class="text-center">
+                                    <div class="stat-number text-primary">${prediction.predicted_volume} m³/hour</div>
+                                    <p class="text-muted mb-0">Natural Gas Consumption</p>
+                                </div>
                             </div>
                         </div>
                         <div class="row mt-3">
-                            <div class="col-md-6">
+                            <div class="col-lg-6 mb-3 mb-lg-0">
                                 <h6><i class="fas fa-thermometer-half"></i> Environmental</h6>
-                                <small>
-                                    Temperature: ${prediction.environmental_conditions.temperature}°C<br>
-                                    Pressure: ${prediction.environmental_conditions.pressure} kPa<br>
-                                    Density: ${prediction.environmental_conditions.density} kg/m³
-                                </small>
+                                <div class="row small">
+                                    <div class="col-6">Temperature: ${prediction.environmental_conditions.temperature}°C</div>
+                                    <div class="col-6">Pressure: ${prediction.environmental_conditions.pressure} kPa</div>
+                                    <div class="col-12 mt-1">Density: ${prediction.environmental_conditions.density} kg/m³</div>
+                                </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-lg-6">
                                 <h6><i class="fas fa-tools"></i> Pipe Configuration</h6>
-                                <small>
-                                    Outer Diameter: ${prediction.pipe_info.D_mm} mm<br>
-                                    Inner Diameter: ${prediction.pipe_info.d_mm} mm<br>
-                                    Cross-Section: ${Math.round(prediction.pipe_info.cross_section_area)} mm²
-                                </small>
+                                <div class="row small">
+                                    <div class="col-6">Outer: ${prediction.pipe_info.D_mm} mm</div>
+                                    <div class="col-6">Inner: ${prediction.pipe_info.d_mm} mm</div>
+                                    <div class="col-12 mt-1">Area: ${Math.round(prediction.pipe_info.cross_section_area)} mm²</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -297,12 +333,12 @@
     document.addEventListener('DOMContentLoaded', function() {
         const loadingSpinner = document.createElement('div');
         loadingSpinner.id = 'quickPredictLoading';
-        loadingSpinner.className = 'loading text-center';
+        loadingSpinner.className = 'loading text-center py-3';
         loadingSpinner.innerHTML = `
             <div class="spinner-border text-primary" role="status">
                 <span class="visually-hidden">Loading...</span>
             </div>
-            <p class="mt-2">Making prediction...</p>
+            <p class="mt-2 mb-0">Making prediction...</p>
         `;
         document.body.appendChild(loadingSpinner);
     });
