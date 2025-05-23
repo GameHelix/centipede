@@ -1,0 +1,30 @@
+[09:23, 22/05/2025] Nail Mammadov: Deməli sistemdə (ümumi qaz şəbəkəsində) müəyyən qaz təzyiqi olur və o təzyiq aşağı düşdüyü zaman avadanlıqlar işləmir. (İstinad: https://oxu.az/iqtisadiyyat/azeriqazdan-qazin-tezyiqi-ile-bagli-aciqlama)
+
+
+AzərQaz bu problemi həll etməyə çalışır. Eyni zamanda onun texniki avadanlıqlarını sıradan çıxarır. Qaz sayğaclarına daxil olan təzyiq aşağı olanda ölçməni düzgün aparmır və maliyyə itikisinə gətirib çıxarır. Eyni zamanda baş verən qəzalar, qaz kəmərlərində sızmalar, sayğaclarda yaranan nasazlıqlarla bağlı məlumat dispetçer mərkəzi tərəfindən təmir-bərpa xidmətinə ötürülür. Bunu zənglə edirlər. Biz isə sistemi real-time izləyərək təzyiq düşgüsünü və ya birdən həddən artıq anomaliya gördüyümüz zaman bunu avtomatlaşdıra bilərik. (https://apa.tv/xeber/sosium/-…
+[09:24, 22/05/2025] Nail Mammadov: 29,367 milyard kub metr mavi qaz istehsal Azərbaycanda əhalinin qaza olan 2.75 milyard kub metrlik tələbatını ödəməkdə çətinliklərin olması anlaşılan deyil. Halbuki, yalnız SOCAR-ın illik  qaz hasilatı 6, 266 milyard kub metrdir. Bu isə əhalinin mavi qaza olan tələbindən 2 dəfədən çox artıqdır.  Əhalinin mavi qaz istehlakı ölkə üzrə ümumi qaz istehsalının 10 %-dən çox olmamasına baxmayaraq, yenə də qaz təminatında problemlər yaşanır.
+
+İstehlakçıların məişət təchizatı zamanı aşağı təzyiqli qaz kəmərlərində süni qaz təzyiqi 0,002 milli bar (0,02 kqs/sm2), təbii qazla təchizatı zamanı 0,003 milli bar qədər (0,03 kqs/sm2),maye qazla – 0,004 milli bar (0,04 kqs/sm2) normalar qəbul olunur. 
+
+Arayış üçün bildirək ki, binalara çəkilən qaz kəmərlərində təzyiq 3 yerə …
+[09:25, 22/05/2025] Nail Mammadov: qaz azlığının əsas səbəbi 2 il əvvəl yəni, 2015-ci ilin noyabr ayında yeni yaranan Bakı Regional Qaz İstismarı Departamenti ilə bağlıdı. Bundan sonra qaz kaflarının çıxışı 30 milli bara salınıb. Halbuki yuxarıdan da göründüyü kimi qazın aşağı təzyiqi 0.05-dən 0.5-ə kimi, yəni 50 milli bara kimi olmalıdır. 
+
+Əslində əgər qaz tənzimləyicilər düz quraşdırılsa, əhali sayına görə tənzimləyicinin qaz keçirmə qüvvəsi düz olmalıdır. Bu, normal qazdır. Sadə kombinin işləməsi üçün 18 milli bardan yuxarı qaz olmalıdır. Amma burda bir problem var. Bakının bir çox rayonları, məsələn, Nəsimi, Xətai, Nərimanov rayonları tək bir mənbədən, yəni QRES-dən yox, eləcə də başqa rayonlardan qaz alır. Rayonun qaz təchizatı, başqa rayonlarla sıx əlaqədədir. Eyni vaxtda rayonların gi…
+[09:25, 22/05/2025] Nail Mammadov: Qaz İstehsalçıların Hüquqlarının Müdafiə Komissiyasın sədri  Nüsrət Qasımov qaz azlığı ilə bağlı TİA.AZ-a danişdı: “Proyektsiz, layihəsiz smetasız tikilən köhnə tikililərdə qaz qonşu -qonşudan, yəni biri o birinə paralel olaraq çəkilib. Bunun özünün də norması var. Yarım düymə boru ilə ancaq 2 ədəd cihaza qaz vermək olar. 19 millimetrlik boru ilə 3 cihaza, 32 millimetrlik boru ilə 4-5 cihaza qaz vermək olar. Ancaq xırda diametr turba ilə 5-6 evə qaz verirlərsə, o təzyiq hamısını yarımçıq qoyacaq və heç kimə çatmayacaq.
+[09:26, 22/05/2025] Nail Mammadov: Belə bir problem ancaq köhnə tikililərdə olur. Təzə binalarda olmur. Çünki təzə binalar layihə- smeta sənədləri əsasında tikilir. Lazım olan təzyiqin  lazım olan həcmdə verilməsi layihədə nəzərdə tutulur”.
+[09:26, 22/05/2025] Nail Mammadov: “Çünki müasir texnologiyalarla işləmirlər. Bizi Almaniya, Amerika, İngiltərəylə müqayisə etmək olmaz. Xaricdə qaz kəmərləri plastik fosfat turbalarla çəkilib, korroziya məsələsi yoxdur. Onlarda yüksək texnologiya var. Bütün zirzəmilərin hamısına detektor deyilən cihaz qoyurlar. Orda qaz sızması olarsa, o detektor dərhal siqnal verir və qazın yolunu özü avtomatik olaraq bağlayır və insanalar da  bundan xəbər tutur. Biz hələ o texnologiyaya gedib çatmamışıq.
+[09:26, 22/05/2025] Nail Mammadov: Biz cəmi 25 ilin gənc ölkəsiyik. Müasir texnologiya avtomat QPS-ə (qaz paylayici stansiya) keçməmişik ki, təzyiq azaldılsın, avtomotik olaraq, öz-özünə sərf artıqca təzyiq artsın. Ona görə də belə hallarda 104 xidməti və 185 qaynar xətt xidməti yaradılıb. Abonentlər müraciətlər etsin və öz tələblərini qoysunlar ki, təzyiq azdır. Aktiv olsunlar öz haqlarını tələb etsinlər  və ya yazılı surətdə bizə və dövlət orqanlarına müraciət etsinlər. Kömək etməyə hazırıq.
+[09:27, 22/05/2025] Nail Mammadov: “Xaricdə istehsal olunan cihazlar bizim ölkənin şəbəkəsinə uyğun deyil. Onların işçi təzyiqi 200 mm su sütunu təzyiqinə bərabərdir. Amma bizdə optimal işçi təzyiq 130 mm-dir. Ona görə bu cihazlar tənzimlənməli, yerli şəraitə uyğunlaşdırılmalıdır.
+
+Son zamanlar Bakıda çoxlu yeni, hündürmərtəbəli binalar tikilir. Gündə 3-4 bina istismara verilir və köhnə xətlərə qoşulur. Axı, qaynaqçı qaz təzyiqi altında işləyə bilmir. Qazın təzyiqini söndürməli və ya almalıdır ki, qaynaqçı işləyə bilsin, təzə binaları köhnə xətlərə qoşa bilsin. Bundan başqa da “Azəriqaz” İstehsalat Birliyinin12 min km-dən çox qaz xətti, 2 milyon da abonenti var. Əgər hər hansı bir yerdə 50 və ya 200 nəfərin belə bir problemi varsa, bu o demək deyil ki, şəhərdə qaz şəbəkəsi tamamilə iflic olunmuş vəziyyətdədir. Bu da normal haldır.
+[09:31, 22/05/2025] Nail Mammadov: Şikayətlər
+
+1. https://www.xezerxeber.az/news/veb-tv/148984/video-tebii-qaza-telebat-artdi-tezyiq-asagi-dusdu
+
+2. https://femida.az/az/news/79089/qazin-tezyiqi-niye-azalib-%E2%80%93-azeriqazdan-aciqlama
+
+3. https://femida.az/az/news/79089/qazin-tezyiqi-niye-azalib-%E2%80%93-azeriqazdan-aciqlama
+
+
+4. https://modern.az/news/153944/   
+Qazın təzyiqi, sudan da, işıqdan da asılıdır. Təzyiqin azalması xüsusilə axşam saatlarında müşahidə edilir. Bu halı da daha çox, suyu qrafiklə alan abonentlər yaşayır. Su qrafiklə veriləndə böyük massivlərdə məhz həmin saatlarda su qızdırıcıları işə düşür. Suyu qrafiklə alan abonentlər, yaxud işləyən vətəndaşlar işlərinin çox hissəsini məhz su gələnə saxlayırlar. Kimisi qablarını, paltarlarını yuyur, kimisi çimir və s. Ona görə də qaz kəmərlərinin ötürücülük qabiliyyəti buna çatmır. Verilən qazın təzyiqini də çox qaldırmaq olmaz. Çünki su kəsilən kimi şəbəkədə yüksək təzyiqə və partlayışa səbəb ola bilər
