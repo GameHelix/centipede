@@ -400,11 +400,13 @@ timeline
 ### Feature Importance Rankings
 ```mermaid
 xychart-beta
-    title "Top 10 Clean Model Features (Abbreviated)"
-    x-axis [Press_Diff, Temp_Dens, Dens_Diam, Vol_24h, Vol_Roll, Vol_12h, Vol_6h, Press_Ratio, Pipe_Area, Pipe_Annular]
+    title "Top 5 Most Important Features"
+    x-axis [Press_Diff, Temp_Dens, Dens_Diam, Vol_24h, Vol_Roll]
     y-axis "Importance Score" 0 --> 12
-    bar [10.12, 9.79, 8.82, 8.55, 7.05, 6.81, 6.16, 4.36, 4.05, 4.05]
+    bar [10.12, 9.79, 8.82, 8.55, 7.05]
 ```
+
+**Complete Top 10 Feature Rankings:**
 
 | Rank | Feature | Full Name | Importance | Category |
 |------|---------|-----------|------------|----------|
@@ -418,6 +420,11 @@ xychart-beta
 | 8 | Press_Ratio | pressure_density_ratio | 4.36 | 🌡️ Environmental |
 | 9 | Pipe_Area | pipe_cross_section_area | 4.05 | 🔧 Pipe |
 | 10 | Pipe_Annular | pipe_annular_area | 4.05 | 🔧 Pipe |
+
+**Key Insights:**
+- 🔧 **Pipe Features**: 4 out of top 10 (genuine pipe intelligence!)
+- 📈 **Historical Features**: 4 out of top 10 (temporal patterns crucial)
+- 🌡️ **Environmental Features**: 2 out of top 10 (conditions matter)
 
 ## 🎯 Business Applications
 
