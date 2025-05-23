@@ -1316,7 +1316,7 @@ graph TD
 ## 🤝 Contributing
 
 ```mermaid
-gitgraph
+gitGraph
     commit id: "Main Branch"
     branch feature/new-algorithm
     checkout feature/new-algorithm
