@@ -83,14 +83,80 @@
             color: #fff !important;
         }
 
-        /* Mobile Navigation */
+        /* FIXED: Mobile Navigation Burger Menu */
         .navbar-toggler {
-            border: none;
-            padding: 0.25rem 0.5rem;
+            border: 2px solid rgba(255, 255, 255, 0.8) !important;
+            padding: 0.4rem 0.6rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-toggler:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 1) !important;
         }
 
         .navbar-toggler:focus {
-            box-shadow: none;
+            box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25) !important;
+            outline: none;
+        }
+
+        /* Custom burger menu icon for better visibility */
+        .navbar-toggler-icon {
+            background-image: none !important;
+            width: 24px;
+            height: 18px;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Create custom hamburger lines */
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after,
+        .navbar-toggler-icon {
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 3px;
+            border-radius: 2px;
+        }
+
+        .navbar-toggler-icon::before {
+            top: 0;
+        }
+
+        .navbar-toggler-icon::after {
+            bottom: 0;
+        }
+
+        .navbar-toggler-icon {
+            height: 3px;
+            border-radius: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Animation when menu is expanded */
+        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+            background-color: transparent;
+        }
+
+        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+            transform: rotate(45deg);
+            top: 7.5px;
+        }
+
+        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+            transform: rotate(-45deg);
+            bottom: 7.5px;
         }
 
         /* Card Styles */
@@ -350,6 +416,32 @@
             .navbar-nav .nav-link {
                 margin: 0;
                 padding: 0.75rem 1rem;
+            }
+
+            /* Improved mobile burger menu */
+            .navbar-toggler {
+                padding: 0.5rem 0.7rem;
+                margin-right: 0.5rem;
+            }
+
+            .navbar-collapse {
+                background: rgba(0, 0, 0, 0.1);
+                margin-top: 1rem;
+                border-radius: 10px;
+                backdrop-filter: blur(10px);
+            }
+
+            .navbar-collapse.show {
+                margin-top: 1rem;
+                padding: 1rem 0;
+            }
+
+            .navbar-nav .nav-link {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .navbar-nav .nav-link:last-child {
+                border-bottom: none;
             }
 
             /* Mobile form improvements */
@@ -705,7 +797,7 @@
                 }, index * 100);
             });
 
-            // Navbar collapse on click for mobile
+            // IMPROVED: Navbar collapse on click for mobile with better UX
             const navbarNav = document.getElementById('navbarNav');
             const navLinks = navbarNav.querySelectorAll('.nav-link');
             
@@ -718,6 +810,19 @@
                         }
                     }
                 });
+            });
+
+            // IMPROVED: Add click outside to close mobile menu
+            document.addEventListener('click', function(event) {
+                const navbar = document.querySelector('.navbar');
+                const navbarCollapse = document.getElementById('navbarNav');
+                
+                if (!navbar.contains(event.target) && navbarCollapse.classList.contains('show')) {
+                    const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                    if (bsCollapse) {
+                        bsCollapse.hide();
+                    }
+                }
             });
 
             // Add touch feedback for mobile
