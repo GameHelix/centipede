@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>{% block title %}Gas Usage Prediction System{% endblock %}</title>
     
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon_io/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon_io/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon_io/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='favicon_io/site.webmanifest') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon_io/favicon.ico') }}">
+    
     <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -20,9 +27,10 @@
             --warning-color: #f39c12;
             --danger-color: #e74c3c;
             --light-bg: #f8f9fa;
-            --dark-bg: #343a40;
+            --dark-bg: #2c3e50;
+            --footer-bg: #1a252f;
             --navbar-height: 70px;
-            --footer-height: 120px;
+            --footer-height: 100px;
         }
 
         /* Base Styles */
@@ -193,14 +201,59 @@
             letter-spacing: 1px;
         }
 
-        /* Footer Styles - Fixed positioning issues */
+        /* Improved Footer Styles */
         .footer {
-            background: var(--dark-bg);
-            color: white;
-            padding: 2rem 0;
+            background: linear-gradient(135deg, var(--footer-bg), var(--dark-bg));
+            color: #ffffff;
+            padding: 1.5rem 0;
             margin-top: auto;
             flex-shrink: 0;
             min-height: var(--footer-height);
+            border-top: 3px solid var(--secondary-color);
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        }
+
+        .footer h5 {
+            color: #ffffff;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer p, .footer small {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .footer .text-muted {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+
+        .footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .footer .social-links a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+
+        .footer .social-links a:hover {
+            background: var(--secondary-color);
+            color: #ffffff;
+            transform: translateY(-3px);
         }
 
         /* Utility Classes */
@@ -260,7 +313,7 @@
         @media (max-width: 768px) {
             :root {
                 --navbar-height: 80px;
-                --footer-height: 160px;
+                --footer-height: 120px;
             }
 
             .container {
@@ -365,7 +418,7 @@
             /* Mobile footer */
             .footer {
                 text-align: center;
-                padding: 1.5rem 0;
+                padding: 1rem 0;
             }
 
             .footer .row {
@@ -373,7 +426,16 @@
             }
 
             .footer .col-md-6 {
-                margin-bottom: 1rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .footer h5 {
+                font-size: 1rem;
+            }
+
+            .footer p {
+                font-size: 0.875rem;
+                margin-bottom: 0.5rem;
             }
         }
 
@@ -406,6 +468,10 @@
             /* Ensure buttons don't break layout */
             .btn-group-vertical .btn {
                 margin-bottom: 0.5rem;
+            }
+
+            .footer {
+                padding: 0.75rem 0;
             }
         }
 
@@ -452,6 +518,11 @@
             .btn-primary {
                 background: #0066cc;
                 border: 2px solid #0066cc;
+            }
+
+            .footer {
+                background: #000000;
+                border-top-color: #ffffff;
             }
         }
     </style>
@@ -536,29 +607,34 @@
         {% block content %}{% endblock %}
     </main>
 
-    <!-- Footer -->
+    <!-- Improved Footer -->
     <footer class="footer">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    <h5 class="mb-2">
-                        <i class="fas fa-fire"></i> 
+                <div class="col-md-8 text-center text-md-start mb-2 mb-md-0">
+                    <h5 class="mb-1">
+                        <i class="fas fa-fire text-warning"></i> 
                         <span class="d-none d-sm-inline">Gas Usage Prediction System</span>
                         <span class="d-inline d-sm-none">GUP System</span>
                     </h5>
-                    <p class="mb-0 small">Advanced ML-powered natural gas consumption forecasting with 98.59% accuracy.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-1 small">
-                        <i class="fas fa-robot"></i> Powered by Ridge Regression & Pipe Intelligence
+                    <p class="mb-0 small">
+                        <i class="fas fa-robot text-success"></i> 
+                        ML-powered forecasting with 98.59% accuracy • 
+                        <i class="fas fa-tools text-info"></i> 
+                        Ridge Regression & Pipe Intelligence
                     </p>
                     <small class="text-muted">© 2025 - Built with Flask & Bootstrap</small>
-                    <div class="mt-2">
-                        <a href="https://github.com/Ismat-Samadov/gas_usage_prediction" target="_blank" class="text-light me-2" title="GitHub Repository">
+                </div>
+                <div class="col-md-4 text-center text-md-end">
+                    <div class="social-links">
+                        <a href="https://github.com/Ismat-Samadov/gas_usage_prediction" target="_blank" title="GitHub Repository">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://ismat.pro" target="_blank" class="text-light" title="Developer Website">
+                        <a href="https://ismat.pro" target="_blank" title="Developer Website">
                             <i class="fas fa-globe"></i>
+                        </a>
+                        <a href="mailto:contact@ismat.pro" title="Contact Developer">
+                            <i class="fas fa-envelope"></i>
                         </a>
                     </div>
                 </div>
