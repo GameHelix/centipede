@@ -18,7 +18,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
-app.secret_key = 'your-secret-key-change-in-production'
+app.secret_key = os.environ.get('SECRET_KEY', 'your-secret-key-change-in-production')
 CORS(app)  # Enable CORS for API endpoints
 
 # Global variables for model components
@@ -559,17 +559,30 @@ def round2_filter(value):
     except:
         return value
 
-# Initialize the application
-# Production configuration
-if __name__ != '__main__':
-    # Gunicorn configuration
-    import logging
-    logging.basicConfig(level=logging.INFO)
+# =============================================================================
+# APPLICATION INITIALIZATION
+# =============================================================================
+
+# Load model on application startup
+try:
+    load_model()
+    logger.info("✅ Model loaded successfully on startup")
+except Exception as e:
+    logger.error(f"❌ Failed to load model on startup: {str(e)}")
+    # In production, you might want to fail fast
+    # raise e
+
+# Development server configuration
+if __name__ == '__main__':
+    # Development mode
+    port = int(os.environ.get('PORT', 5000))
+    debug = os.environ.get('FLASK_ENV') == 'development'
     
-    # Ensure model is loaded
-    if model is None:
-        try:
-            load_model()
-            logger.info("Model loaded successfully in production")
-        except Exception as e:
-            logger.error(f"Failed to load model in production: {e}")
+    logger.info(f"🚀 Starting development server on port {port}")
+    logger.info(f"🔧 Debug mode: {debug}")
+    
+    app.run(
+        host='0.0.0.0',
+        port=port,
+        debug=debug
+    )
