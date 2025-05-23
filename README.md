@@ -82,10 +82,16 @@ flowchart TD
 ```mermaid
 xychart-beta
     title "Model Performance Evolution"
-    x-axis [Original, Enhanced (Leaky), Clean (Final)]
+    x-axis [Original, Enhanced_Leaky, Clean_Final]
     y-axis "R² Score (%)" 97.5 --> 100
     bar [98.11, 99.95, 98.59]
 ```
+
+| Model Version | R² Score | Status | Notes |
+|---------------|----------|--------|-------|
+| **Original** | 98.11% | ✅ Baseline | Good performance |
+| **Enhanced (Leaky)** | 99.95% | ⚠️ Suspicious | Data leakage detected |
+| **Clean (Final)** | 98.59% | ✅ Production | Reliable & enhanced |
 
 ## 🔧 Advanced Pipe Diameter Intelligence
 
@@ -226,21 +232,30 @@ graph TD
 
 ### Enhanced 2025 Predictions
 ```mermaid
-pie title 2025 Seasonal Forecast (Clean Model)
-    "Winter (28.9 m³/h)" : 35
-    "Fall (22.8 m³/h)" : 28  
-    "Spring (21.5 m³/h)" : 26
-    "Summer (13.7 m³/h)" : 11
+pie title 2025 Seasonal Forecast - Clean Model
+    "Winter 28.9" : 35
+    "Fall 22.8" : 28  
+    "Spring 21.5" : 26
+    "Summer 13.7" : 11
 ```
+
+| Season | Predicted Volume | Peak Hours | Notes |
+|--------|------------------|------------|-------|
+| **Winter** | 28.9 m³/hour | 6PM | Highest demand |
+| **Fall** | 22.8 m³/hour | 6PM | Increasing usage |
+| **Spring** | 21.5 m³/hour | 12PM | Moderate demand |
+| **Summer** | 13.7 m³/hour | 12PM | Lowest usage |
 
 ### Historical Pipe Intelligence
 ```mermaid
 xychart-beta
     title "Inner Diameter vs Flow Capacity"
     x-axis [105mm, 120mm, 150mm, 180mm, 200mm, 220mm]
-    y-axis "Avg Flow (m³/h)" 5 --> 25
+    y-axis "Flow Rate (m³/h)" 5 --> 25
     line [8.2, 10.5, 14.8, 18.6, 22.1, 24.7]
 ```
+
+**Key Insight**: Linear relationship between inner diameter and flow capacity validates the pipe intelligence model!
 
 ## 🚀 Quick Start
 
@@ -442,11 +457,18 @@ flowchart TD
 ### Model Performance Comparison
 ```mermaid
 xychart-beta
-    title "Model Performance Evolution"
-    x-axis ["Original Baseline", "Enhanced (Leaky)", "Clean Model", "Industry Standard"]
+    title "Model Performance vs Industry"
+    x-axis [Original_Baseline, Enhanced_Leaky, Clean_Model, Industry_Standard]
     y-axis "R² Score (%)" 75 --> 100
     bar [98.11, 99.95, 98.59, 85.0]
 ```
+
+| Model Type | R² Score | Status | Comparison |
+|------------|----------|--------|------------|
+| **Original Baseline** | 98.11% | ✅ Good | Starting point |
+| **Enhanced (Leaky)** | 99.95% | ⚠️ Invalid | Data leakage |
+| **Clean Model** | 98.59% | ✅ Best | Production ready |
+| **Industry Standard** | ~85.0% | 📊 Reference | Typical performance |
 
 ### Accuracy Improvements
 | Metric | Original Model | Clean Model | Improvement |
