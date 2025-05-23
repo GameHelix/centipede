@@ -385,11 +385,24 @@ timeline
 ### Feature Importance Rankings
 ```mermaid
 xychart-beta
-    title "Top 10 Clean Model Features"
-    x-axis [pressure_diff_per_thickness, temp_density_interaction, density_diameter_interaction, volume_lag_24h, volume_rolling_mean_24h_lag12, volume_lag_12h, volume_lag_6h, pressure_density_ratio, pipe_cross_section_area, pipe_annular_area]
+    title "Top 10 Clean Model Features (Abbreviated)"
+    x-axis [Press_Diff, Temp_Dens, Dens_Diam, Vol_24h, Vol_Roll, Vol_12h, Vol_6h, Press_Ratio, Pipe_Area, Pipe_Annular]
     y-axis "Importance Score" 0 --> 12
     bar [10.12, 9.79, 8.82, 8.55, 7.05, 6.81, 6.16, 4.36, 4.05, 4.05]
 ```
+
+| Rank | Feature | Full Name | Importance | Category |
+|------|---------|-----------|------------|----------|
+| 1 | Press_Diff | pressure_diff_per_thickness | 10.12 | 🔧 Pipe |
+| 2 | Temp_Dens | temp_density_interaction | 9.79 | 🌡️ Environmental |
+| 3 | Dens_Diam | density_diameter_interaction | 8.82 | 🔧 Pipe |
+| 4 | Vol_24h | volume_lag_24h | 8.55 | 📈 Historical |
+| 5 | Vol_Roll | volume_rolling_mean_24h_lag12 | 7.05 | 📈 Historical |
+| 6 | Vol_12h | volume_lag_12h | 6.81 | 📈 Historical |
+| 7 | Vol_6h | volume_lag_6h | 6.16 | 📈 Historical |
+| 8 | Press_Ratio | pressure_density_ratio | 4.36 | 🌡️ Environmental |
+| 9 | Pipe_Area | pipe_cross_section_area | 4.05 | 🔧 Pipe |
+| 10 | Pipe_Annular | pipe_annular_area | 4.05 | 🔧 Pipe |
 
 ## 🎯 Business Applications
 
