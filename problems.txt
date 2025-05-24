@@ -1,15 +1,29 @@
 [09:23, 22/05/2025] Nail Mammadov: Deməli sistemdə (ümumi qaz şəbəkəsində) müəyyən qaz təzyiqi olur və o təzyiq aşağı düşdüyü zaman avadanlıqlar işləmir. (İstinad: https://oxu.az/iqtisadiyyat/azeriqazdan-qazin-tezyiqi-ile-bagli-aciqlama)
 
 
-AzərQaz bu problemi həll etməyə çalışır. Eyni zamanda onun texniki avadanlıqlarını sıradan çıxarır. Qaz sayğaclarına daxil olan təzyiq aşağı olanda ölçməni düzgün aparmır və maliyyə itikisinə gətirib çıxarır. Eyni zamanda baş verən qəzalar, qaz kəmərlərində sızmalar, sayğaclarda yaranan nasazlıqlarla bağlı məlumat dispetçer mərkəzi tərəfindən təmir-bərpa xidmətinə ötürülür. Bunu zənglə edirlər. Biz isə sistemi real-time izləyərək təzyiq düşgüsünü və ya birdən həddən artıq anomaliya gördüyümüz zaman bunu avtomatlaşdıra bilərik. (https://apa.tv/xeber/sosium/-…
+AzərQaz bu problemi həll etməyə çalışır. Eyni zamanda onun texniki avadanlıqlarını sıradan çıxarır. Qaz sayğaclarına daxil olan təzyiq aşağı olanda ölçməni düzgün aparmır və maliyyə itikisinə gətirib çıxarır. Eyni zamanda baş verən qəzalar, qaz kəmərlərində sızmalar, sayğaclarda yaranan nasazlıqlarla bağlı məlumat dispetçer mərkəzi tərəfindən təmir-bərpa xidmətinə ötürülür. Bunu zənglə edirlər. Biz isə sistemi real-time izləyərək təzyiq düşgüsünü və ya birdən həddən artıq anomaliya gördüyümüz zaman bunu avtomatlaşdıra bilərik. (https://apa.tv/xeber/sosium/-26665)
+
+
+
+Eyni zamanda rejim dəyişikləri Azəriqazın ən böyük problemidi. Yay-qış rejimi dəyişdikdən sonra sərfiyyat fərqli olur və  Qış mövsümündə qaza olan tələbatın artması bəzi problemlərə səbəb olur. Qış mövsümündə istehlakçılar tərəfindən qaza olan tələbat 2-3 dəfə artır. Xəttə qaz həcmi sərfiyyatı ödəmi və təzyiq düşür. (https://sonxeber.az/13005/qisda-qazin-tezyiqi-niye-asagi-dusur-azeriqaz-resmisi-sebebi-aciqladi)
+
+
+
+Sumqayıtda olan qaz təzyiqinin azalması ilə bağlı şikayət -https://www.xezerxeber.az/index.php/news/veb-tv/430683/bezi-bolgelerde-qaz-tezyiqi-niye-azalib
 [09:24, 22/05/2025] Nail Mammadov: 29,367 milyard kub metr mavi qaz istehsal Azərbaycanda əhalinin qaza olan 2.75 milyard kub metrlik tələbatını ödəməkdə çətinliklərin olması anlaşılan deyil. Halbuki, yalnız SOCAR-ın illik  qaz hasilatı 6, 266 milyard kub metrdir. Bu isə əhalinin mavi qaza olan tələbindən 2 dəfədən çox artıqdır.  Əhalinin mavi qaz istehlakı ölkə üzrə ümumi qaz istehsalının 10 %-dən çox olmamasına baxmayaraq, yenə də qaz təminatında problemlər yaşanır.
 
 İstehlakçıların məişət təchizatı zamanı aşağı təzyiqli qaz kəmərlərində süni qaz təzyiqi 0,002 milli bar (0,02 kqs/sm2), təbii qazla təchizatı zamanı 0,003 milli bar qədər (0,03 kqs/sm2),maye qazla – 0,004 milli bar (0,04 kqs/sm2) normalar qəbul olunur. 
 
-Arayış üçün bildirək ki, binalara çəkilən qaz kəmərlərində təzyiq 3 yerə …
+Arayış üçün bildirək ki, binalara çəkilən qaz kəmərlərində təzyiq 3 yerə bölünür :
+
+1) Sənaye müəssisələrində, kommunal və kənd təsərrüfatı müəssisələrində yerləşən ayrıca qazanxanalarda – 0,6 milli bar (6 kqs/sm2);
+
+2) Kənd təsərrüfatı və kommunal müəssisələrdə, (hamam, camaşırxanalarda,   kimya fabriklərində, çörəkbişirmə və s),  qurulanlar binalarda – 0,3 milli bar (3 кqs/sm2);
+
+3) Yaşayış və ictimai binalarda, istimai iaşə müəssisələrində (restoranlar, yeməkxanalar, bufetlər və s) və məişət xidməti (bərbərxanalar, camaşırxanalar, atelye və s.) müəssisələrində – aşağı təzyiq (0,005 milli bar-a qədər).
 [09:25, 22/05/2025] Nail Mammadov: qaz azlığının əsas səbəbi 2 il əvvəl yəni, 2015-ci ilin noyabr ayında yeni yaranan Bakı Regional Qaz İstismarı Departamenti ilə bağlıdı. Bundan sonra qaz kaflarının çıxışı 30 milli bara salınıb. Halbuki yuxarıdan da göründüyü kimi qazın aşağı təzyiqi 0.05-dən 0.5-ə kimi, yəni 50 milli bara kimi olmalıdır. 
 
-Əslində əgər qaz tənzimləyicilər düz quraşdırılsa, əhali sayına görə tənzimləyicinin qaz keçirmə qüvvəsi düz olmalıdır. Bu, normal qazdır. Sadə kombinin işləməsi üçün 18 milli bardan yuxarı qaz olmalıdır. Amma burda bir problem var. Bakının bir çox rayonları, məsələn, Nəsimi, Xətai, Nərimanov rayonları tək bir mənbədən, yəni QRES-dən yox, eləcə də başqa rayonlardan qaz alır. Rayonun qaz təchizatı, başqa rayonlarla sıx əlaqədədir. Eyni vaxtda rayonların gi…
+Əslində əgər qaz tənzimləyicilər düz quraşdırılsa, əhali sayına görə tənzimləyicinin qaz keçirmə qüvvəsi düz olmalıdır. Bu, normal qazdır. Sadə kombinin işləməsi üçün 18 milli bardan yuxarı qaz olmalıdır. Amma burda bir problem var. Bakının bir çox rayonları, məsələn, Nəsimi, Xətai, Nərimanov rayonları tək bir mənbədən, yəni QRES-dən yox, eləcə də başqa rayonlardan qaz alır. Rayonun qaz təchizatı, başqa rayonlarla sıx əlaqədədir. Eyni vaxtda rayonların girişindəki qazın təzyiqi də aşağı salınıb. Nəticədə isə hər bir rayonun birbaşa aldığı xəttin qaz təzyiqində problem olmadığı halda, ətraf rayonlardan aldığı qazın təzyiqi əksər hallarda 20-30 milli bardan yuxarı olmur. Bu isə o deməkdir ki, qaz tənzimləyici şkaf 60-70 milli bar almalı, vaxtında ana xəttə gələn zəif qaz və özündən əvvəl duran qaz xətləri əhalinin istifadəsi nəticəsində 20-25 milli bar qaz alır. Tənzimləyicinin isə iş prinsipi belədir ki, özünə daxil olan qazın 50-60%-dən çoxunu buraxmasın. Deməli, əgər tənzimləyiciyə qaz 20 milli bar  daxil olursa, deməli ordan 10 milli bar çıxır və bunun üstünə də əhalinin həmin əhatə dairəsindəki, sıxlığını gəlsək, sakinin evinə qaz 5-10 milli bar ancaq daxil olur. Bu da hətta sədə kombinin yanması üçün çox azdır. 4 gözlü sobada qaz ancaq közərir.
 [09:25, 22/05/2025] Nail Mammadov: Qaz İstehsalçıların Hüquqlarının Müdafiə Komissiyasın sədri  Nüsrət Qasımov qaz azlığı ilə bağlı TİA.AZ-a danişdı: “Proyektsiz, layihəsiz smetasız tikilən köhnə tikililərdə qaz qonşu -qonşudan, yəni biri o birinə paralel olaraq çəkilib. Bunun özünün də norması var. Yarım düymə boru ilə ancaq 2 ədəd cihaza qaz vermək olar. 19 millimetrlik boru ilə 3 cihaza, 32 millimetrlik boru ilə 4-5 cihaza qaz vermək olar. Ancaq xırda diametr turba ilə 5-6 evə qaz verirlərsə, o təzyiq hamısını yarımçıq qoyacaq və heç kimə çatmayacaq.
 [09:26, 22/05/2025] Nail Mammadov: Belə bir problem ancaq köhnə tikililərdə olur. Təzə binalarda olmur. Çünki təzə binalar layihə- smeta sənədləri əsasında tikilir. Lazım olan təzyiqin  lazım olan həcmdə verilməsi layihədə nəzərdə tutulur”.
 [09:26, 22/05/2025] Nail Mammadov: “Çünki müasir texnologiyalarla işləmirlər. Bizi Almaniya, Amerika, İngiltərəylə müqayisə etmək olmaz. Xaricdə qaz kəmərləri plastik fosfat turbalarla çəkilib, korroziya məsələsi yoxdur. Onlarda yüksək texnologiya var. Bütün zirzəmilərin hamısına detektor deyilən cihaz qoyurlar. Orda qaz sızması olarsa, o detektor dərhal siqnal verir və qazın yolunu özü avtomatik olaraq bağlayır və insanalar da  bundan xəbər tutur. Biz hələ o texnologiyaya gedib çatmamışıq.
@@ -17,14 +31,100 @@ Arayış üçün bildirək ki, binalara çəkilən qaz kəmərlərində təzyiq 
 [09:27, 22/05/2025] Nail Mammadov: “Xaricdə istehsal olunan cihazlar bizim ölkənin şəbəkəsinə uyğun deyil. Onların işçi təzyiqi 200 mm su sütunu təzyiqinə bərabərdir. Amma bizdə optimal işçi təzyiq 130 mm-dir. Ona görə bu cihazlar tənzimlənməli, yerli şəraitə uyğunlaşdırılmalıdır.
 
 Son zamanlar Bakıda çoxlu yeni, hündürmərtəbəli binalar tikilir. Gündə 3-4 bina istismara verilir və köhnə xətlərə qoşulur. Axı, qaynaqçı qaz təzyiqi altında işləyə bilmir. Qazın təzyiqini söndürməli və ya almalıdır ki, qaynaqçı işləyə bilsin, təzə binaları köhnə xətlərə qoşa bilsin. Bundan başqa da “Azəriqaz” İstehsalat Birliyinin12 min km-dən çox qaz xətti, 2 milyon da abonenti var. Əgər hər hansı bir yerdə 50 və ya 200 nəfərin belə bir problemi varsa, bu o demək deyil ki, şəhərdə qaz şəbəkəsi tamamilə iflic olunmuş vəziyyətdədir. Bu da normal haldır.
-[09:31, 22/05/2025] Nail Mammadov: Şikayətlər
+Şikayətlər
 
-1. https://www.xezerxeber.az/news/veb-tv/148984/video-tebii-qaza-telebat-artdi-tezyiq-asagi-dusdu
+1. https://www.xezerxeber.az/news/veb-tv/148984/video-tebii-qaza-telebat-artdi-tezyiq-asagi-dusdu:
 
-2. https://femida.az/az/news/79089/qazin-tezyiqi-niye-azalib-%E2%80%93-azeriqazdan-aciqlama
+Ətraflı
+Havaların şaxtalı keçməsi ilə əlaqədar olaraq təbii qaza tələbat artıb. Bu səbəbdən də paytaxtın bəzi ərazilərində qazın təzyiqi aşağı düşüb.
 
-3. https://femida.az/az/news/79089/qazin-tezyiqi-niye-azalib-%E2%80%93-azeriqazdan-aciqlama
+Bəzi ərazilərdə qazın təzyiqi azalıb.
+
+Görüntülər Paytaxtın Suraxanı rayonu Zığ qəsəbəsi, Hatəm Allahevrdiyev küçəsindəndir. Sakinlərin sözlərinə görə, xeyli müddətdir evlərə verilən təbii qaz zəifdir.
+
+Xətai rayonu Ramiz Quliyev küçəsində də bənzər vəziyyət var. Buradakı sakinlər də qaz təzyiqinin aşağı olduğunu bildirirlər.
+
+Məsələ ilə bağlı "Azəriqaz" İstehsalat Birliyindən bildirildi ki, yaranmış problemlə bağlı lazımi işlər görülüb.
+
+Sakinlərin şikayət və müraciətləri ilə bağlı birliyinin 104 və 185 saylı operativ zəng xidmətləri də fəaliyyət göstərir.
+
+Burada 24 saat sakinlər tərəfindən daxil olan müraciətlər qəbul edilir.
+
+Dərhali operativ şəkildə ya müvafiq sahəyə ötürülür, ya da vətəndaşa yardım göstərilir.
+
+"Azəriqaz" İstehsalat Birliyinin Təmir-Tikinti idarəsinin işçi heyəti də lazımi alət və avadanlqılarla təchiz edilib ki, qəza baş verən zaman dərhal aradan qaldırmaq mümkün olsun.
 
 
-4. https://modern.az/news/153944/   
+2. https://femida.az/az/news/79089/qazin-tezyiqi-niye-azalib-%E2%80%93-azeriqazdan-aciqlama:
+azın təzyiqi niyə azalıb? – “Azəriqaz”dan açıqlama
+
+ 14:33     16 Aprel 2018qaz7.jpg
+"Azəriqaz" İstehsalat Birliyi Azərbaycanda, o cümlədən Bakının bir neçə rayonunda son günlərdə əhaliyə verilən təbii qazın təzyiqinin aşağı düşməsi məsələsinə aydınlıq gətirib.
+
+“Azəriqaz”ın ictimaiyyətlə əlaqələr şöbəsinin rəisi İbrahim Kərbalayev Femida.az-a bildirib ki, Azərbaycanda havanın temperaturunun kəskin aşağı düşməsi ilə əlaqədar ölkə ərazisində təbii qaz sərfiyyatı artıb, nəticədə “Azəriqaz” İB balansında olan kəmərlərdə qazın təzyiqi aşağı enib.
+
+İ.Kərbalayevin sözlərinə görə, fərqli ərazilərdə, bəzi fərdi yaşayış evlərində mavi yanacağın verilməsində çətinlik yarandığından şəbəkəyə verilən qazın həcmi artırılıb. "Azəriqaz" rəsmisi əlavə edib ki, bütövlükdə təbii qazla təchizatda problem yoxdur.
+
+“Bu gün də həmin işlər davam etdirilir, tənzimləmə işləri aparılır. Şəbəkəyə verilən təbii qazın həcmi artırıldıqdan, qurumun əməkdaşları tərəfindən qazpaylayıcı şkaflarda, qaz tənzimləyicilərində, siyirtmələrdə tənzimləmə işləri aparıldıqdan sonra ölkə ərazisində fərdi şəkildə şikayətlər istisna olmaqla, bu gün mavi yanacağın verilişində ciddi problem yoxdur. Ölkə ərazisində təbii qazın verilişi ilə bağlı aprelin 14-ü ilə aprel ayının 15-ni müqayisə etsək, 14 apreldə ölkə ərazisində təbii qazın verilişi 16 milyon 823 min kubmetr idisə, 15 apreldə artıq bu rəqəm 19 milyon 679 min kubmetr olub. Bu iki gün arasında fərq isə 2 milyon 856 kubmetr olub. Hal-hazırda da tənzimləmə işləri davam etdirilir və hansı ərazilərdə təzyiqlə bağlı çatışmazlıq yaşanırsa, qaz təchizatının texnoloji rejimə uyğun təmin üçün işlər görülür”, - deyə qurum rəsmisi əlavə edib.
+
+3. https://femida.az/az/news/79089/qazin-tezyiqi-niye-azalib-%E2%80%93-azeriqazdan-aciqlama:
+azın təzyiqi niyə azalıb? – “Azəriqaz”dan açıqlama
+
+ 14:33     16 Aprel 2018qaz7.jpg
+"Azəriqaz" İstehsalat Birliyi Azərbaycanda, o cümlədən Bakının bir neçə rayonunda son günlərdə əhaliyə verilən təbii qazın təzyiqinin aşağı düşməsi məsələsinə aydınlıq gətirib.
+
+“Azəriqaz”ın ictimaiyyətlə əlaqələr şöbəsinin rəisi İbrahim Kərbalayev Femida.az-a bildirib ki, Azərbaycanda havanın temperaturunun kəskin aşağı düşməsi ilə əlaqədar ölkə ərazisində təbii qaz sərfiyyatı artıb, nəticədə “Azəriqaz” İB balansında olan kəmərlərdə qazın təzyiqi aşağı enib.
+
+İ.Kərbalayevin sözlərinə görə, fərqli ərazilərdə, bəzi fərdi yaşayış evlərində mavi yanacağın verilməsində çətinlik yarandığından şəbəkəyə verilən qazın həcmi artırılıb. "Azəriqaz" rəsmisi əlavə edib ki, bütövlükdə təbii qazla təchizatda problem yoxdur.
+
+“Bu gün də həmin işlər davam etdirilir, tənzimləmə işləri aparılır. Şəbəkəyə verilən təbii qazın həcmi artırıldıqdan, qurumun əməkdaşları tərəfindən qazpaylayıcı şkaflarda, qaz tənzimləyicilərində, siyirtmələrdə tənzimləmə işləri aparıldıqdan sonra ölkə ərazisində fərdi şəkildə şikayətlər istisna olmaqla, bu gün mavi yanacağın verilişində ciddi problem yoxdur. Ölkə ərazisində təbii qazın verilişi ilə bağlı aprelin 14-ü ilə aprel ayının 15-ni müqayisə etsək, 14 apreldə ölkə ərazisində təbii qazın verilişi 16 milyon 823 min kubmetr idisə, 15 apreldə artıq bu rəqəm 19 milyon 679 min kubmetr olub. Bu iki gün arasında fərq isə 2 milyon 856 kubmetr olub. Hal-hazırda da tənzimləmə işləri davam etdirilir və hansı ərazilərdə təzyiqlə bağlı çatışmazlıq yaşanırsa, qaz təchizatının texnoloji rejimə uyğun təmin üçün işlər görülür”, - deyə qurum rəsmisi əlavə edib.
+
+
+4. https://modern.az/news/153944/ :
+Qazın təzyiqi niyə “oynayır”?- “Xörək hazırlanan peçin üstünə kərpic qoyub ev qızdırırlar”
+Qazın təzyiqi niyə “oynayır”?- “Xörək hazırlanan peçin üstünə kərpic qoyub ev qızdırırlar”
+ 11 Yanvar 2018, 13:54
+Havaların soyuması təbii qaza olan tələbatı artırıb. Bu isə öz növbəsində abonentlərin qazın təzyiqinin aşağı düşməsi, tez-tez “oynaması” ilə bağlı şikayətlərinə səbəb olub.
+
+ 
+
+Qazın təzyiqini azaldan səbəblər
+
+ 
+
+“Azəriqaz” İstehsalat Birliyinin sabiq idarə rəisi, Azad İstehlakçılar Birliyinin Kommunal xidmətlər üzrə eksperti Nüsrət Qasımov Modern.az-a bildirir ki, qazın təzyiqinin azalması bir qurumla bağlı məsələ deyil:
+
+ 
+
+“Qazın təzyiqi, sudan da, işıqdan da asılıdır. Təzyiqin azalması xüsusilə axşam saatlarında müşahidə edilir. Bu halı da daha çox, suyu qrafiklə alan abonentlər yaşayır. Su qrafiklə veriləndə böyük massivlərdə məhz həmin saatlarda su qızdırıcıları işə düşür. Suyu qrafiklə alan abonentlər, yaxud işləyən vətəndaşlar işlərinin çox hissəsini məhz su gələnə saxlayırlar. Kimisi qablarını, paltarlarını yuyur, kimisi çimir və s. Ona görə də qaz kəmərlərinin ötürücülük qabiliyyəti buna çatmır. Verilən qazın təzyiqini də çox qaldırmaq olmaz. Çünki su kəsilən kimi şəbəkədə yüksək təzyiqə və partlayışa səbəb ola bilər”.
+
+ 
+
+"Bəzi ərazilərdə köhnə qaz avadanlıqlar hələ də qalır"
+
+ 
+Ətraflı
+Ad - 00:08
+
+Ekspert deyir ki, əksər abonentlər yemək bişirilən peçi evi qızdırmaq üçün istifadə edir:
+
+ 
+
+“İşığın verilməsində fasilələr yarandıqda, yaxud heç fasilə yaranmasa belə, əksəriyyət xörək hazırlamaq üçün nəzərdə tutulan peçin (dördgöz) 4 gözünü də yandırır. Bu azmış kimi üstünə yekə bir kərpic, dəmir də qoyur ki, ev qızsın. Yaxud da yağ radiatorları ilə qızınırlar. Bu, harada görünüb? Yalnız bizdə. İnsanlar anlamır ki, bu peç çay qızdırmaq, yemək hazırlamaq üçündür, evi qızdırmaq üçün yox. Abonentlərin sayına görə boruların diametri seçilir. Yüklənmə çox olanda problem yaranır. Bundan başqa, kombi istifadəçiləri dərəcəni 60-da saxlamaqdansa, 90, 100 dərəcəyə qaldırır. Ona görə də şəbəkədə təzyiq aşağı düşür. Həmçinin, bəzi yerlərdə köhnə sistemli avadanlıqlardır ki, işçi gedib onu tənzimləyənə qədər müəyyən qədər vaxt gedir. Bir də bizim insanlarımız çox dözümsüz, səbirsiz olub. İş varsa, problem olması normaldır. Bu, təkcə qaz sahəsinə aid deyil. Mənim “Azəriqaz”ı müdafiə etmək fikrim yoxdur, amma reallıq da nəzərə alınmalıdır. 20-30 kilometrlik qaz kəməri, 2 milyona yaxın abonenti var. 1-2 yerdə problem olmasını ölkədə qaz problemi kimi təqdim etmək düzgün deyil. Yaxşı olar ki, vətəndaşlar redaksiyalara üz tutana qədər, quruma müraciət etsin. İnsanlar çox vaxt heç bir yerə müraciət etmədən mətbuata çıxırlar. Adamlar istəyir ki, evindən çıxmadan kimsə onun problemini həll etsin”.
+
+ 
+
+Qaz sərfiyyatında 2 günə 2 milyon 458 kubmetr fərq
+
+ 
+
+Məsələ ilə bağlı  “Azəriqaz” İstehsalat Birliyinin (İB) mətbuat xidmətinin rəhbəri İbrahim Kərbalayev Modern.az-a deyir ki, temperaturun aşağı düşməsi ilə təbii qaza olan tələbat artıb:
+
+ 
+
+“Son iki gündə havalar kəskin soyuyub. ”Azəriqaz” İstehsalat Birliyi tələbata uyğun olaraq, təbii qazın verilişini təmin edir. Belə ki, respublika üzrə sərfiyyat  yanvarın 9-da 26 milyon 951 min kubmetr, yanvarın 10-da 29 milyon 409 min kubmetr olub. Yəni tələbat artdıqca, təbii qazın verilişi də artırılır. İki gün üzrə sərfiyyatda olan fərq 2 milyon 458 min kubmetr təşkil edir.
+
+ 
+
+Kimsə təzyiqin oynaması halı ilə rastlaşıbsa, “Azəriqaz”ın 104 və 185 saylı çağrı mərkəzinə müraciət edə bilər. Daxil olan müraciətlər əməkdaşlarımız tərəfindən araşdırılır və lazımi tədbirlər görülür. Bu saata qədər qeyd etdiyiniz halla bağlı çağırı mərkəzinə kütləvi müraciət daxil olmayıb”.
 Qazın təzyiqi, sudan da, işıqdan da asılıdır. Təzyiqin azalması xüsusilə axşam saatlarında müşahidə edilir. Bu halı da daha çox, suyu qrafiklə alan abonentlər yaşayır. Su qrafiklə veriləndə böyük massivlərdə məhz həmin saatlarda su qızdırıcıları işə düşür. Suyu qrafiklə alan abonentlər, yaxud işləyən vətəndaşlar işlərinin çox hissəsini məhz su gələnə saxlayırlar. Kimisi qablarını, paltarlarını yuyur, kimisi çimir və s. Ona görə də qaz kəmərlərinin ötürücülük qabiliyyəti buna çatmır. Verilən qazın təzyiqini də çox qaldırmaq olmaz. Çünki su kəsilən kimi şəbəkədə yüksək təzyiqə və partlayışa səbəb ola bilər
