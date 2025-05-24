@@ -192,7 +192,7 @@ graph LR
         E[✅ Clean Dataset<br/>57,834 rows<br/>Ready for ML]
     end
     
-    subgraph "Why This Approach?"
+    subgraph "Why This Approach"
         F[🏭 Industrial Context<br/>Sensor spikes normal]
         G[📊 Data Preservation<br/>No sample loss]
         H[🎯 Model Compatibility<br/>Ridge Regression optimized]
@@ -218,26 +218,26 @@ graph LR
 ```mermaid
 flowchart TB
     subgraph "Feature Engineering Factory"
-        subgraph "Temporal Intelligence [8 Features]"
+        subgraph "Temporal Intelligence - 8 Features"
             T1[🕐 Hour Encoding<br/>sin/cos cyclical<br/>Prevents boundary issues]
             T2[📅 Day of Week<br/>sin/cos encoding<br/>Weekly patterns]
             T3[🗓️ Month Encoding<br/>sin/cos cyclical<br/>Seasonal continuity]
             T4[📆 Calendar Features<br/>day_of_month, is_weekend<br/>Monthly patterns]
         end
         
-        subgraph "Environmental Physics [7 Features]"
+        subgraph "Environmental Physics - 7 Features"
             E1[🌡️ Base Measurements<br/>temperature, pressure<br/>density, pressure_diff]
             E2[⚗️ Physics Interactions<br/>temp × pressure<br/>Ideal gas law: PV=nRT]
             E3[⚖️ Density Ratios<br/>pressure/density<br/>Flow dynamics]
         end
         
-        subgraph "Pipe Intelligence [10 Features]"
+        subgraph "Pipe Intelligence - 10 Features"
             P1[📐 Core Geometry<br/>D_mm, d_mm<br/>diameter_ratio, wall_thickness]
             P2[🔧 Flow Dynamics<br/>cross_section_area<br/>pressure_per_diameter]
             P3[⚡ Advanced Interactions<br/>density × diameter<br/>temp × diameter]
         end
         
-        subgraph "Historical Memory [10 Features]"
+        subgraph "Historical Memory - 10 Features"
             H1[⏰ Lag Features<br/>6h, 12h, 24h, 48h, 168h<br/>Operational patterns]
             H2[📊 Rolling Statistics<br/>mean, std, median<br/>Trend analysis]
             H3[🚫 Leakage Prevention<br/>Minimum 12h offsets<br/>Future data isolation]
@@ -322,10 +322,10 @@ graph TB
 graph TB
     subgraph "Algorithm Comparison Matrix"
         subgraph "Performance Metrics"
-            A[📊 Ridge Regression<br/>R²: 98.59%<br/>Size: 4.3KB<br/>Speed: <1ms]
+            A[📊 Ridge Regression<br/>R²: 98.59%<br/>Size: 4.3KB<br/>Speed: less than 1ms]
             B[🌲 Random Forest<br/>R²: 98.12%<br/>Size: 25MB<br/>Speed: 15ms]
             C[🚀 XGBoost<br/>R²: 98.31%<br/>Size: 8MB<br/>Speed: 8ms]
-            D[📈 Linear Regression<br/>R²: 97.85%<br/>Size: 4.1KB<br/>Speed: <1ms]
+            D[📈 Linear Regression<br/>R²: 97.85%<br/>Size: 4.1KB<br/>Speed: less than 1ms]
             E[🧠 Neural Network<br/>R²: 98.41%<br/>Size: 15MB<br/>Speed: 25ms]
         end
         
@@ -460,7 +460,7 @@ xychart-beta
 
 ```mermaid
 graph TB
-    subgraph "Frontend Layer [Bootstrap 5 + JavaScript]"
+    subgraph "Frontend Layer - Bootstrap 5 + JavaScript"
         subgraph "User Interfaces"
             UI1[🏠 Dashboard<br/>index.html<br/>Model status & quick actions]
             UI2[🔮 Single Prediction<br/>predict.html<br/>Individual forecasts]
@@ -477,7 +477,7 @@ graph TB
         end
     end
     
-    subgraph "Backend Layer [Flask + ML Pipeline]"
+    subgraph "Backend Layer - Flask + ML Pipeline"
         subgraph "Web Application"
             WEB1[🌐 Flask Routes<br/>Template rendering]
             WEB2[📝 Form Handling<br/>User input processing]
@@ -959,18 +959,22 @@ def after_request(response):
 
 ```
 gas_usage_prediction/
-├── 📄 convert.py                    # PDF to CSV conversion script
+├── 📄 colab.ipynb                           # Jupyter notebook for analysis & experimentation
+├── 📄 comprehensive_model_test.py           # Comprehensive overfitting detection & model validation
+├── 📄 convert.py                            # PDF to CSV conversion script
 ├── 📁 data/
-│   ├── data.csv                     # Processed dataset (57,834 rows)
-│   └── data.pdf                     # Original PDF data source
-├── 📄 LICENSE                       # MIT License
-├── 📄 main.py                      # Full-stack Flask application
+│   ├── data.csv                             # Processed dataset (57,834 rows × 9 columns)
+│   └── data.pdf                             # Original PDF data source
+├── 📄 LICENSE                               # MIT License
+├── 📄 main.py                              # Full-stack Flask application
 ├── 📁 models/
-│   └── clean_gas_usage_model.pkl   # Trained Ridge model (4.3KB)
-├── 📄 README.md                    # This documentation
-├── 📄 requirements.txt             # Python dependencies
+│   └── clean_gas_usage_model.pkl           # Trained Ridge model (4.3KB, v3.0 Clean)
+├── 📄 problems.md                          # Detailed problem analysis & business case
+├── 📄 README.md                            # This comprehensive documentation
+├── 📄 requirements.txt                     # Python dependencies
+├── 📄 simple_model_test.py                 # Simple model testing on diverse data points
 ├── 📁 static/
-│   └── favicon_io/                 # Favicon files for web app
+│   └── favicon_io/                         # Favicon files for web application
 │       ├── about.txt
 │       ├── android-chrome-192x192.png
 │       ├── android-chrome-512x512.png
@@ -979,17 +983,31 @@ gas_usage_prediction/
 │       ├── favicon-32x32.png
 │       ├── favicon.ico
 │       └── site.webmanifest
-├── 📁 templates/                   # Jinja2 HTML templates
-│   ├── 404.html                    # Custom 404 error page
-│   ├── 500.html                    # Custom 500 error page
-│   ├── about.html                  # Model documentation page
-│   ├── base.html                   # Base template with navigation
-│   ├── batch.html                  # Batch prediction interface
-│   ├── compare.html                # Pipe comparison tool
-│   ├── index.html                  # Dashboard homepage
-│   └── predict.html                # Single prediction form
-└── 📄 trainer.py                   # Model training script
+├── 📁 templates/                           # Jinja2 HTML templates
+│   ├── 404.html                            # Custom 404 error page
+│   ├── 500.html                            # Custom 500 error page
+│   ├── about.html                          # Model documentation & specifications
+│   ├── base.html                           # Base template with navigation
+│   ├── batch.html                          # Batch prediction interface
+│   ├── compare.html                        # Pipe comparison tool
+│   ├── index.html                          # Dashboard homepage
+│   └── predict.html                        # Single prediction form
+└── 📄 trainer.py                           # Complete model training script
 ```
+
+### Key Files Explained
+
+| File | Purpose | Key Features |
+|------|---------|--------------|
+| **`main.py`** | Full-stack Flask app | REST API + Web interface, 5 endpoints, mobile responsive |
+| **`trainer.py`** | Model training pipeline | 5-fold TSCV, data leakage prevention, feature engineering |
+| **`convert.py`** | Data extraction | PDF → CSV with pipe intelligence extraction |
+| **`comprehensive_model_test.py`** | Overfitting detection | 8 diagnostic methods, temporal analysis, production validation |
+| **`simple_model_test.py`** | Basic model validation | Diverse test cases, error analysis, seasonal performance |
+| **`colab.ipynb`** | Research notebook | Experimentation, prototyping, analysis workflows |
+| **`problems.md`** | Business analysis | Market opportunity, technical challenges, CEO-validated insights |
+| **`data.csv`** | Clean dataset | 57,834 rows × 9 columns with pipe specifications |
+| **`clean_gas_usage_model.pkl`** | Production model | 4.3KB Ridge regression, 99.02% accuracy, no overfitting |
 
 ## 📚 API Documentation
 
@@ -1141,7 +1159,7 @@ mindmap
 
 ```mermaid
 graph TD
-    subgraph "Feature Importance Ranking (Top 10)"
+    subgraph "Feature Importance Ranking - Top 10"
         A[🥇 #1: pressure_diff_per_thickness<br/>Importance: 10.12<br/>Category: Pipe Intelligence]
         B[🥈 #2: temp_density_interaction<br/>Importance: 9.79<br/>Category: Environmental]
         C[🥉 #3: density_diameter_interaction<br/>Importance: 8.82<br/>Category: Pipe Intelligence] 
@@ -1209,34 +1227,6 @@ graph TD
    • Model Size: 4.3KB
    • Inference Time: <1ms
 ```
-## 📊 Performance Metrics
-
-### Production Monitoring Dashboard
-
-| Metric | Value | Status |
-|--------|-------|--------|
-| **Uptime** | 99.9% | 🟢 Excellent |
-| **Error Rate** | 0.1% | 🟢 Low |
-| **Avg Response Time** | 45ms | 🟢 Fast |
-| **Daily Requests** | 2,100+ | 📈 Growing |
-| **Model Accuracy** | 98.59% | 🎯 High |
-
-### Cross-Validation Results
-```
-📊 5-Fold Time Series Cross-Validation:
-   • Mean R²: 98.59% (±0.85%)
-   • Fold 1 (2019-2020): R² = 99.06% 
-   • Fold 2 (2020-2021): R² = 96.93% (COVID resilience)
-   • Fold 3 (2021-2022): R² = 98.66%
-   • Fold 4 (2022-2023): R² = 99.06%
-   • Fold 5 (2023-2024): R² = 99.22%
-   
-🎯 Production Metrics:
-   • Training RMSE: 1.65 m³/hour
-   • Training MAE: 0.92 m³/hour
-   • Model Size: 4.3KB
-   • Inference Time: <1ms
-```
 
 ## 🔍 Comprehensive Post-Training Model Evaluation
 
@@ -1245,17 +1235,17 @@ graph TD
 ```mermaid
 graph TB
     subgraph "Model Performance Metrics"
-        A[📊 Overall R²: 99.02%<br/>Exceptional Accuracy]
-        B[📏 RMSE: 1.412 m³/hour<br/>Low Error Rate]
-        C[📐 MAE: 0.757 m³/hour<br/>High Precision]
-        D[📈 MAPE: 6.86%<br/>Excellent Reliability]
+        A["📊 Overall R²: 99.02%<br/>Exceptional Accuracy"]
+        B["📏 RMSE: 1.412 m³/hour<br/>Low Error Rate"]
+        C["📐 MAE: 0.757 m³/hour<br/>High Precision"]
+        D["📈 MAPE: 6.86%<br/>Excellent Reliability"]
     end
     
     subgraph "Overfitting Analysis"
-        E[🎯 Risk Score: 0/7<br/>No Overfitting Detected]
-        F[⏰ Temporal Consistency<br/>σ = 0.0061 (Excellent)]
-        G[🔄 Performance Stability<br/>Late data performs better]
-        H[✅ Production Ready<br/>Recommended for deployment]
+        E["🎯 Risk Score: 0/7<br/>No Overfitting Detected"]
+        F["⏰ Temporal Consistency<br/>Standard Dev = 0.0061 Excellent"]
+        G["🔄 Performance Stability<br/>Late data performs better"]
+        H["✅ Production Ready<br/>Recommended for deployment"]
     end
     
     A --> E
@@ -1300,7 +1290,7 @@ pie title Overfitting Risk Assessment
 ```
 
 **Comprehensive Overfitting Tests:**
-- ✅ **Temporal Consistency**: Excellent (σ = 0.0061)
+- ✅ **Temporal Consistency**: Excellent (standard deviation = 0.0061)
 - ✅ **Performance Stability**: Late data R² = 99.20% vs Early R² = 98.96%
 - ✅ **Residual Analysis**: No significant autocorrelation detected
 - ✅ **Cross-Year Validation**: All years maintain >97.5% accuracy
@@ -1326,14 +1316,14 @@ pie title Overfitting Risk Assessment
 ```mermaid
 graph TB
     subgraph "Consumption Level Analysis"
-        A[High Consumption Q4<br/>R² = 89.09%<br/>Strong Predictability]
-        B[Medium Consumption Q2-Q3<br/>R² = ~95%<br/>Good Performance]
-        C[Low Consumption Q1<br/>R² = -9.28%*<br/>Inherent Difficulty]
+        A["High Consumption Q4<br/>R² = 89.09%<br/>Strong Predictability"]
+        B["Medium Consumption Q2-Q3<br/>R² = approximately 95%<br/>Good Performance"]
+        C["Low Consumption Q1<br/>R² = -9.28%*<br/>Inherent Difficulty"]
     end
     
     subgraph "Technical Explanation"
-        D[Low consumption harder to predict<br/>Noise-to-signal ratio higher<br/>Base load variations significant]
-        E[High consumption driven by<br/>Clear temperature patterns<br/>Strong seasonal correlations]
+        D["Low consumption harder to predict<br/>Noise-to-signal ratio higher<br/>Base load variations significant"]
+        E["High consumption driven by<br/>Clear temperature patterns<br/>Strong seasonal correlations"]
     end
     
     A --> E
