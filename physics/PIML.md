@@ -1,7 +1,6 @@
 # Physics-Informed Machine Learning: From Theory to Production
 ## A Comprehensive Analysis of Approaches, Challenges, and Real-World Implementation
 
-[![Physics-Informed](https://img.shields.io/badge/Physics-Informed-ML-blue.svg)](https://github.com/physics-ml)
 [![Production Ready](https://img.shields.io/badge/Production-Ready-green.svg)](https://github.com/physics-ml)
 [![Case Study](https://img.shields.io/badge/Case_Study-Gas_Prediction-orange.svg)](https://github.com/physics-ml)
 [![Accuracy](https://img.shields.io/badge/Accuracy-98.35%25-brightgreen.svg)](https://github.com/physics-ml)
