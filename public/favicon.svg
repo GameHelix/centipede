@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Background -->
+  <rect width="32" height="32" rx="6" fill="#05050f"/>
+  <!-- Centipede body segments -->
+  <circle cx="16" cy="8" r="3.5" fill="#00ff88" filter="url(#g)"/>
+  <circle cx="22" cy="10" r="3" fill="#00cc66"/>
+  <circle cx="27" cy="13" r="2.5" fill="#009944"/>
+  <circle cx="10" cy="10" r="3" fill="#00cc66"/>
+  <circle cx="5" cy="13" r="2.5" fill="#009944"/>
+  <!-- Head eyes -->
+  <circle cx="15" cy="7" r="0.7" fill="#ffffff"/>
+  <circle cx="17" cy="7" r="0.7" fill="#ffffff"/>
+  <!-- Antennae -->
+  <line x1="15" y1="5.5" x2="13" y2="3" stroke="#00ff88" stroke-width="0.8" stroke-linecap="round"/>
+  <line x1="17" y1="5.5" x2="19" y2="3" stroke="#00ff88" stroke-width="0.8" stroke-linecap="round"/>
+  <!-- Player ship at bottom -->
+  <polygon points="16,26 12,31 20,31" fill="#ffcc00" filter="url(#y)"/>
+  <rect x="15" y="24" width="2" height="3" fill="#ffee88"/>
+  <!-- Mushroom -->
+  <ellipse cx="8" cy="22" rx="3" ry="2" fill="#cc44ff" filter="url(#p)"/>
+  <rect x="6.5" y="22" width="3" height="2.5" rx="0.5" fill="#aa33dd"/>
+  <!-- Defs for glow filters -->
+  <defs>
+    <filter id="g" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="y" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="p" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+</svg>
