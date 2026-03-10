@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base resets ─────────────────────────────────────────────────────────── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  background-color: #050510;
+  color: #00ff88;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#__next,
+main {
+  height: 100%;
+}
+
+/* Prevent text selection during gameplay */
+canvas {
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+  display: block;
+}
+
+/* Neon scrollbar (for any scrollable areas) */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #00ff88;
+  border-radius: 2px;
+}
+
+/* Custom button focus visible */
+button:focus-visible {
+  outline: 2px solid #00ff88;
+  outline-offset: 2px;
+}
